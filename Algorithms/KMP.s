@@ -7,13 +7,11 @@ _start:
 	ldr r4, =cadena
 	
 verifica:
-	CMP r1, #4
-	BGE aumenta
-	add r1, r1, #1	
+	
+	mov r1, #0
 	B busqueda
 aumenta: 
-	add r2, r2, #1
-	mov r1, #0
+	add r1, r1, #1
 	B busqueda
 busqueda:	
 	
@@ -23,10 +21,14 @@ busqueda:
 	ldrb r6, [r3,r1]
 	add r0, r0, #1
 	CMP r6, r5
-	BGE verifica
+	bne verifica
+	CMP r1, #4
+	bne aumenta
+	add r2, r2, #1
 	mov r1, #0
 	b busqueda
 
 fin: B fin
 lorem: .asciz "Lorem"
-cadena: .asciz "LoreuiLoremfvfhghnLorem"
+cadena: .asciz "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impreso"
+	
