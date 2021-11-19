@@ -1,0 +1,27 @@
+# Reading pref.tcl
+# do ProcesadorARM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/User/Desktop/VII\ SEMESTRE\ 2021/Taller\ de\ Diseño\ Digital/Semana\ 16/ARMv4Processor-Processor-VGAController/Procesador {C:/Users/User/Desktop/VII SEMESTRE 2021/Taller de Diseño Digital/Semana 16/ARMv4Processor-Processor-VGAController/Procesador/decoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:15 on Nov 19,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Desktop/VII SEMESTRE 2021/Taller de Diseño Digital/Semana 16/ARMv4Processor-Processor-VGAController/Procesador" C:/Users/User/Desktop/VII SEMESTRE 2021/Taller de Diseño Digital/Semana 16/ARMv4Processor-Processor-VGAController/Procesador/decoder.sv 
+# init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/User/Desktop/VII SEMESTRE 2021/Taller de Diseño Digital/Semana 16/ARMv4Processor-Processor-VGAController/Procesador/simulation/modelsim/rtl_work/_lib.qdb): unable to open database file
+# mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+# ** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/User/Desktop/VII SEMESTRE 2021/Taller de Diseño Digital/Semana 16/ARMv4Processor-Processor-VGAController/Procesador/simulation/modelsim/rtl_work/_temp/vlog7a16h4".
+# C:/Users/User/Desktop/VII SEMESTRE 2021/Taller de Diseño Digital/Semana 16/ARMv4Processor-Processor-VGAController/Procesador/decoder.sv(1): Verilog Compiler exiting
+# End time: 15:43:15 on Nov 19,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./ProcesadorARM_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/User/Desktop/VII\ SEMESTRE\ 2021/Taller\ de\ Diseño\ Digital/Semana\ 16/ARMv4Processor-Processor-VGAController/Pr..."
