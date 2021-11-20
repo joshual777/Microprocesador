@@ -12,20 +12,25 @@ module decoder(input logic [1:0] Op,
 	// Main Decoder
 	always_comb
 		casex(Op)
-						// Data-processing immediate
-			2'b00: if (Funct[5]) controls = 10'b00_00_1_0_1_0_0_1; //If statement: verify if a second source operand(Src2) is an immmediate
-						// Data-processing register
-					else controls = 10'b00_00_0_0_1_0_0_1;
-						// LDR con segundo operando (que representa un offset) SOLO como un inmediato
-			2'b01: if (Funct[0]) controls = 10'b00_01_1_1_1_0_0_0; 
-						// STR con segundo operando (que representa un offset) SOLO como un inmediato
-					else controls = 10'b10_01_1_1_0_1_0_0;
-						// B
-			2'b10: controls = 10'b01_10_1_0_0_0_1_0;
+						// Se encarga de las instrucciones de procesamiento
+			2'b00: if (Funct[5]) controls = 10'b00_00_1_0_1_0_0_1; //Valida que se requiera un inmediato y se manda un 1 en ALUSrc MUx y se escoge el inmediato
+						
+					else controls = 10'b00_00_0_0_1_0_0_1;// Por el contrario no se necesita el inmediato, se envia un 0 y se escoge el RD2 del register (es decir un registro)
+					
+					
+					//Se encarga de las instrucciones de memoria Revisa valor de B, puesto que los algoritmos solo tienen LDR/LDRD
+						
+			2'b01: if (Funct[2]) controls = 10'b00_01_0_1_1_0_0_0; // LDRD con L=1 !I =1, U=1, P=1, w=0 este lleva offset y trabaja con registro
+			
+					else controls = 10'b01_01_1_1_1_0_0_0; // LDR con L =1, !I=0, U=1, P=0, w=1 este no lleva offset y trabaja con inmediato
+						
+						
+				// Se encarga de las instrucciones de Saltos 
+			2'b10: controls = 10'b01_10_1_0_0_0_1_0;// aqui siempre mantengo L en 1, hay un 1 en ALUSrc y por tanto un inmedisto de 10 y un registerSRc de 1 que es de la 15-2
 						// Unimplemented
 			default: controls = 10'bx;
 		endcase
-	
+	// 10'b00_00_1_0_1_0_0_1
 	assign {RegSrc, ImmSrc, ALUSrc, MemtoReg, RegW, MemW, Branch, ALUOp} = controls;
 	
 	// ALU Decoder
