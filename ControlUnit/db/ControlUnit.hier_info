@@ -1,0 +1,44 @@
+|decoder
+Op[0] => Mux0.IN5
+Op[0] => Mux1.IN4
+Op[0] => Mux2.IN5
+Op[0] => ImmSrc[0].DATAIN
+Op[0] => MemtoReg.DATAIN
+Op[1] => Mux0.IN4
+Op[1] => Mux1.IN3
+Op[1] => Mux2.IN4
+Op[1] => RegSrc[0].DATAIN
+Op[1] => ImmSrc[1].DATAIN
+Op[1] => PCS.IN1
+Op[1] => RegW.DATAIN
+Op[1] => PCS.IN1
+Funct[0] => FlagW.IN1
+Funct[0] => FlagW.DATAB
+Funct[1] => ~NO_FANOUT~
+Funct[2] => Mux3.IN10
+Funct[2] => Mux4.IN5
+Funct[2] => Mux1.IN2
+Funct[2] => Mux0.IN3
+Funct[3] => Mux3.IN9
+Funct[4] => Mux3.IN8
+Funct[4] => Mux4.IN4
+Funct[5] => Mux1.IN5
+Rd[0] => Equal2.IN3
+Rd[1] => Equal2.IN2
+Rd[2] => Equal2.IN1
+Rd[3] => Equal2.IN0
+FlagW[0] <= FlagW.DB_MAX_OUTPUT_PORT_TYPE
+FlagW[1] <= FlagW.DB_MAX_OUTPUT_PORT_TYPE
+PCS <= PCS.DB_MAX_OUTPUT_PORT_TYPE
+RegW <= Op[1].DB_MAX_OUTPUT_PORT_TYPE
+MemW <= <GND>
+MemtoReg <= Op[0].DB_MAX_OUTPUT_PORT_TYPE
+ALUSrc <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ImmSrc[0] <= Op[0].DB_MAX_OUTPUT_PORT_TYPE
+ImmSrc[1] <= Op[1].DB_MAX_OUTPUT_PORT_TYPE
+RegSrc[0] <= Op[1].DB_MAX_OUTPUT_PORT_TYPE
+RegSrc[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[0] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[1] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
+
+

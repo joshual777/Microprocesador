@@ -26,7 +26,7 @@ module decoder(input logic [1:0] Op,
 						
 						
 				// Se encarga de las instrucciones de Saltos 
-			2'b10: controls = 10'b01_10_1_0_0_0_1_0;// aqui siempre mantengo L en 1, hay un 1 en ALUSrc y por tanto un inmedisto de 10 y un registerSRc de 1 que es de la 15-2
+			2'b10: controls = 10'b11_10_1_0_0_0_1_0;// aqui siempre mantengo L en 0, hay un 1 en ALUSrc y por tanto un inmedisto de 10 y un registerSRc de 11 que jala el R15 y ademas toma del 15:12
 						// Unimplemented
 			default: controls = 10'bx;
 		endcase
