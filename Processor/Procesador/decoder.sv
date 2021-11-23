@@ -22,7 +22,7 @@ module decoder(input logic [1:0] Op,
 						
 			2'b01: if (Funct[2]) controls = 10'b00_01_0_1_1_0_0_0; // LDRD con L=1 !I =1, U=1, P=1, w=0 este lleva offset y trabaja con registro
 			
-					else controls = 10'b01_01_1_1_1_0_0_0; // LDR con L =1, !I=0, U=1, P=0, w=1 este no lleva offset y trabaja con inmediato
+					else controls = 10'b10_01_1_1_1_0_0_0; // LDR con L =1, !I=0, U=1, P=0, w=1 este no lleva offset y trabaja con inmediato
 						
 						
 				// Se encarga de las instrucciones de Saltos 
@@ -30,7 +30,7 @@ module decoder(input logic [1:0] Op,
 						// Unimplemented
 			default: controls = 10'bx;
 		endcase
-	// 10'b00_00_1_0_1_0_0_1
+	// 10'b00_00_1_0_1_0_0_1b  
 	assign {RegSrc, ImmSrc, ALUSrc, MemtoReg, RegW, MemW, Branch, ALUOp} = controls;
 	
 	// ALU Decoder
@@ -41,7 +41,7 @@ module decoder(input logic [1:0] Op,
 					4'b0100: ALUControl = 2'b00; // ADD
 					4'b0010: ALUControl = 2'b01; // SUB
 					4'b0001: ALUControl = 2'b10; // XOR
-					4'b1111: ALUControl = 2'b11; // NOT
+					4'b1100: ALUControl = 2'b11; // NOT
 					default: ALUControl = 2'bx; // unimplemented
 				endcase
 				

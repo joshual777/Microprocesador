@@ -28,16 +28,12 @@ module datapath(input logic clk, reset,
 					 output logic [31:0] ReadOutData,
 					 output logic [31:0] PC, Result, Instr); //Salidas que solo se quieren observar.
 					 
-	//logic [31:0] PC, PCNext, PCPlus4, PCPlus8, Instr, ReadData, WriteData;
-	//logic [31:0] PCPlus4, PCPlus8, ReadData, WriteData;
+	
 	logic [31:0] PCNext, PCPlus4, PCPlus8, ReadData, WriteData, ALUResult;
 	
 	logic [31:0] ExtImm, SrcA, SrcB;
-	//logic [31:0] ExtImm, SrcA, SrcB, Result;
 	logic [3:0] RA1, RA2;
-	
-	// Next PC logic
-	mux2 #(32) pcmux(PCPlus4, ALUResult, PCSrc, PCNext);	
+	mux2 #(32) pcmux(PCPlus4, ReadData, PCSrc, PCNext);	
 	flopr #(32) pcreg(clk, reset, PCNext, PC);
 	
 	instructionMemory instMem(PC, Instr);
