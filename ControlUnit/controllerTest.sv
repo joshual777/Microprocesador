@@ -66,34 +66,63 @@ module controllerTest();
 	
 	//Creacion de un reloj
 	always begin
-		clk = 0; #5; clk=~clk; #5;
+		 clk=~clk; #5;
 	end
 		
 	
 	initial begin
 	
 		reset = 1; #1; reset = 0; #4; //Se resetea los registros que permiten o no la actualizacion de los flags.
-		
-	// Ejemplo 1
-		Instr = 20'hE04F0; #10; // SUB R0, R15, R15 ; R0 = 0
-		
-		Instr = 20'hE2801; #10; // ADD R1, R0, #2 ; R1 = 2
-		
-		Instr = 20'hE2802; #10; // ADD R2, R0, #5 ; R2 = 5
-		
-		Instr = 20'hE2804; #10; // ADD R4, R0, #0x00
-		
-		Instr = 20'hE0519; #5;  // SUBS R9, R1,R2
-		ALUFlags = 4'b1000; #5; // NZCV 
-		
-		Instr = 20'hDA000; #10;  // BLE R2ESMAYOR 
-		
-		Instr = 20'hE0413; #10;  // SUB R3,R1, R2   		
-		Instr = 20'hEA000; #10;  // B FIN		   
-		Instr = 20'hE0813; #10;  // ADD R3, R1, R2  
-		Instr = 20'hE5843; #10;  // STR R3, [R4]		
-		
-		
+		clk = 0; #5;
+	// Ejemplo Fuerza Bruta
+		Instr = 20'he3a00000; #10; // mov r0, #0
+		Instr = 20'he3a01000; #10; // mov r1, #0
+		Instr = 20'he3a02000; #10; // mov r2, #0
+		Instr = 20'he59f3214; #10; // ldr r3, lorem
+		Instr = 20'he59f4214; #10; // ldr r4, cadena
+		Instr = 20'he7d45000; #10; // ldrb r5, [r4,r0] 
+		Instr = 20'he3550000; #10; // CMP r5, #00000000   		
+		Instr = 20'h0a00000e; #10; // beq fin		   
+		Instr = 20'he7d36001; #10; // ldrb r6, [r3,r1] 
+		Instr = 20'he2800001; #10; // add r0, r0, #1		
+		Instr = 20'he1560005; #10; // CMP r6, r5
+		Instr = 20'h1a000005; #10; // bne verifica
+		Instr = 20'he3510004; #10; // CMP r1, #4
+		Instr = 20'h1a000006; #10; // bne aumenta
+		Instr = 20'he2822001; #10; // add r2, r2, #1
+		Instr = 20'he0400001; #10; // sub r0, r0, r1
+		Instr = 20'he3a01000; #10; // mov r1, #0
+		Instr = 20'heafffff2; #10; // b busqueda
+		Instr = 20'he0400001; #10; // sub r0, r0, r1
+		Instr = 20'he3a01000; #10; // mov r1, #0
+		Instr = 20'heaffffef; #10; // b busqueda
+		Instr = 20'he2811001; #10; // add r1, r1, #1
+		Instr = 20'heaffffed; #10; // b busqueda
+		Instr = 20'heafffffe; #10; // b fin
+		#50;
+	// Ejemplo KMP
+	   Instr = 20'he3a00000; #10; // mov r0, #0
+		Instr = 20'he3a01000; #10; // mov r1, #0
+		Instr = 20'he3a02000; #10; // mov r2, #0
+		Instr = 20'he59f3214; #10; // ldr r3, lorem
+		Instr = 20'he59f4214; #10; // ldr r4, cadena
+		Instr = 20'he3550000; #10;	//mov r1, #0
+		Instr = 20'hea000001; #10; // b busqueda 
+		Instr = 20'he2811001; #10; // add r1, r1, #1
+		Instr = 20'hea000001; #10; // b busqueda 
+		Instr = 20'he3a01000; #10; // ldrb r5, [r4,r0] 
+		Instr = 20'he3550000; #10; // CMP r5, #00000000   		
+		Instr = 20'h0a00000e; #10; // beq fin		   
+		Instr = 20'he7d36001; #10; // ldrb r6, [r3,r1] 
+		Instr = 20'he2800001; #10; // add r0, r0, #1		
+		Instr = 20'he1560005; #10; // CMP r6, r5
+		Instr = 20'h1a000005; #10; // bne verifica
+		Instr = 20'he3510004; #10; // CMP r1, #4
+		Instr = 20'h1a000006; #10; // bne aumenta
+		Instr = 20'he2822001; #10; // add r2, r2, #1
+		Instr = 20'he3a01000; #10; // mov r1, #0
+		Instr = 20'heafffff2; #10; // b busqueda
+		Instr = 20'heafffffe; #10; // b fin
 	end
 	
 						  
