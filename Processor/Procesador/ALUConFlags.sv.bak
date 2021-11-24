@@ -19,7 +19,17 @@ module ALUConFlags #(parameter n = 32)(input  logic [n-1:0] A, B,
 
 	ALUSinFlags #(n)  aluSinFlags(A, B, ALUControl, out, cOut);
 	
-
+	
+	/*
+	assign xnorOut = A[N-1] ~^ B[n-1] ~^ ALUControl[0];
+	assign xorOut = A[N-1] ^ out[n-1];
+	assign notOut = ~ALUControl[1];
+	
+	assign V = xnorOut & xorOut & notOut;
+	assign C = notOut & cOut;
+	assign N = out[N-1];
+	assign Z = ~out;
+	*/
 	
 	
 	//assign V = (A[31] ~^ B[31] ~^ ALUControl[0]) & (A[31] ^ out[31]) & (~ALUControl[1]); //Depende del ancho de los datos A, B y out

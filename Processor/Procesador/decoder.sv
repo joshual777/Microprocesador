@@ -42,6 +42,7 @@ module decoder(input logic [1:0] Op,
 					4'b0010: ALUControl = 2'b01; // SUB
 					4'b0001: ALUControl = 2'b10; // XOR
 					4'b1100: ALUControl = 2'b11; // NOT
+					
 					default: ALUControl = 2'bx; // unimplemented
 				endcase
 				

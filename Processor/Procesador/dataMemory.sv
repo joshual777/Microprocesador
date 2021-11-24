@@ -1,15 +1,15 @@
 /* 
 	Memoria de datos.
-	Contiene las palabras descifradas. Los últimos 8 bits (LSB) Contienen el valor de la palbra.
+	Contiene el texto previamente cargado
 */
 
 module dataMemory(input logic clk,
 					input logic we, 	//Señal de Write Enable (permitir escritura)
 					input logic[7:0] address, //posición de memoria -> 0 - 255 -> 2^8
-					input logic[7:0] addressForVga,
-					input logic [31:0] wdata, //Write data value -> Write value port
-					output logic [31:0] rdataForVga,
-					output logic [31:0] rdata);//Read data value -> read value port 
+					input logic [31:1] wdata, //Write data value -> Write value port
+					input logic contadorWriteData,
+					output logic contadoReadD,
+					output logic [31:1] rdata);//Read data value -> read value port 
 	
 	logic [7:0] RAM[255:0]; //255 celdas de 8-bit cada uno de ellas. Cada celda se accede de la forma: RAM[<numeroDelaCelda>]
 
@@ -24,7 +24,5 @@ module dataMemory(input logic clk,
 	assign rdata = {RAM[address],RAM[address+1], RAM[address+2], RAM[address+3]};
 
 	
-	// Leer datos desde el VGA
-	assign rdataForVga = {RAM[addressForVga],RAM[addressForVga+1], RAM[addressForVga+2], RAM[addressForVga+3]};
 	
 endmodule

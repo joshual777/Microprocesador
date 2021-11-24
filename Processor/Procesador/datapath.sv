@@ -1,20 +1,4 @@
-/*
-	A nivel de simulación del datapath, se quisieron ver varias señales de salida de las que están
-	a lo interno del procesador. Entre estas señales se encuentran:
-	-> output logic [31:0] PC, ALUResult, PCNext, Instr, Result, SrcA, SrcB.
-	-> output logic [3:0] RA1, RA2.
-	
-	A nivel de su funcionamiento real, las unicas salidas que este modulo debe de tener son:
-	->  output logic [3:0] ALUFlags.
-	->  output logic [31:0] ReadOutData.
-
-	En caso de que se quiera simular y ver todas estas distintas señales, se deben de incluir las mismas
-	en la interfaz del modulo.
-	
-*/
-
-
-module datapath(input logic clk, reset,
+ module datapath(input logic clk, reset,
 					 input logic [1:0] RegSrc,
 					 input logic RegWrite, MemWrite,
 					 input logic [1:0] ImmSrc,
@@ -29,11 +13,11 @@ module datapath(input logic clk, reset,
 					 output logic [31:0] PC, Result, Instr); //Salidas que solo se quieren observar.
 					 
 	
-	logic [31:0] PCNext, PCPlus4, PCPlus8, ReadData, WriteData, ALUResult;
+	logic [31:0] PCNext, PCPlus4, PCPlus8, WriteData, ALUResult;
 	
 	logic [31:0] ExtImm, SrcA, SrcB;
 	logic [3:0] RA1, RA2;
-	mux2 #(32) pcmux(PCPlus4, ReadData, PCSrc, PCNext);	
+	mux2 #(32) pcmux(PCPlus4, Result, PCSrc, PCNext);	
 	flopr #(32) pcreg(clk, reset, PCNext, PC);
 	
 	instructionMemory instMem(PC, Instr);
@@ -54,10 +38,9 @@ module datapath(input logic clk, reset,
 	mux2 #(32) srcbmux(WriteData, ExtImm, ALUSrc, SrcB);
 	ALUConFlags alu(SrcA, SrcB, ALUControl, ALUResult, ALUFlags);
 	
-	dataMemory outDataMemory(clk, MemWrite, ALUResult[7:0], addressForVga, WriteData, rdataForVga, ReadOutData);
-	ROM32 romInputData(ALUResult[10:0], ReadData);
+	dataMemory outDataMemory(clk, MemWrite, ALUResult[7:0], WriteData, ReadOutData);
 	
-	mux2 #(32) resmux(ALUResult, ReadData, MemtoReg, Result);
+	mux2 #(32) resmux(ALUResult, ReadOutData, MemtoReg, Result);
 	
 endmodule
 
