@@ -2,8 +2,8 @@
 	ALUControl1:0  Function
 		00			 	  ADD
 		01			 	  SUB
-		10			 	  XOR
-		11			 	  NOT
+		10			 	  AND
+		11			 	  ORR
 	-------------------------------------------------------
 	Nota: Las ALUFlags corresponden: NZCV
 */
@@ -18,8 +18,6 @@ module ALUConFlags #(parameter n = 32)(input  logic [n-1:0] A, B,
 	
 
 	ALUSinFlags #(n)  aluSinFlags(A, B, ALUControl, out, cOut);
-	
-
 	
 	
 	//assign V = (A[31] ~^ B[31] ~^ ALUControl[0]) & (A[31] ^ out[31]) & (~ALUControl[1]); //Depende del ancho de los datos A, B y out
