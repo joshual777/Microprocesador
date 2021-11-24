@@ -1,0 +1,10 @@
+module restadorCompletoParteB(input logic [3:0]RParteA, 
+		  input logic CoutParteA,
+		  output logic [3:0]RF,
+		  output logic 	  NegFlag);
+
+	assign RF = Cout ? RParteA : ~RParteA + 'b0001; 
+	assign NegFlag = 1; 
+
+
+endmodule

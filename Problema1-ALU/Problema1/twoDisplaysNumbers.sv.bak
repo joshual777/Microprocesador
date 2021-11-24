@@ -1,0 +1,24 @@
+module twoDisplaysNumbers(input logic [3:0] in, output logic [13:0] displays);			
+	always_comb			
+		case(in)
+			//  				13-12-11-10-9-8-7-6-5-4-3-2-1-0
+			//								01234560123456
+			0:			displays = 14'b00000010000001;
+			1:			displays = 14'b00000011001111;
+			2:			displays = 14'b00000010010010;
+			3:			displays = 14'b00000010000110;
+			4:			displays = 14'b00000011001100;
+			5:			displays = 14'b00000010100100;
+			6:			displays = 14'b00000010100000;
+			7:			displays = 14'b00000010001111;
+			8:			displays = 14'b00000010000000;
+			9:			displays = 14'b00000010000100;
+			10:		displays = 14'b10011110000001;
+			11:		displays = 14'b10011111001111;
+			12:		displays = 14'b10011110010010;
+			13:		displays = 14'b10011110000110;
+			14:		displays = 14'b10011111001100;
+			15:		displays = 14'b10011110100100;
+			default: displays = 14'b00000010000001;
+		endcase
+endmodule

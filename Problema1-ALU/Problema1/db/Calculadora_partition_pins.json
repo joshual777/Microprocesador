@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "displayOfNumbers[0]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[1]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[2]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[3]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[4]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[5]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[6]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[8]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[9]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[10]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfNumbers[13]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfFlags[0]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfFlags[3]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfFlags[4]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfFlags[5]",
+					"strict" : false
+				},
+				{
+					"name" : "displayOfFlags[6]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "select[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,17 @@
+module restadorCompletoCuatroBits(input logic [3:0]A,B, 
+		  input logic 		  Cin,
+		  output logic [3:0]R,
+		  output logic 	  Cout);
+
+	logic [3:0]C;
+	
+	assign C[3] = Cin^B[3];
+	assign C[2] = Cin^B[2];
+	assign C[1] = Cin^B[1];
+	assign C[0] = Cin^B[0];
+	
+
+	sumadorCompletoCuatroBits fullAdder4Bits(A, C, Cin, R, Cout);
+
+
+endmodule

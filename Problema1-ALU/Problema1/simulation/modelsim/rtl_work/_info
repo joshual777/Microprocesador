@@ -1,0 +1,470 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Downloads/Problema1-ALU/Problema1/simulation/modelsim
+vALU
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1631639878
+!i10b 1
+!s100 V7VAN2MWa35kTgRoVQoMU3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I16_gS1bz=KNmXd?;I=8A51
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1631333456
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/ALU.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/ALU.sv
+!i122 9
+Z5 L0 1 37
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1631639878.000000
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/ALU.sv|
+!i113 1
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1
+Z10 tCvgOpt 0
+n@a@l@u
+valuWithDisplays
+R1
+Z11 !s110 1631639879
+!i10b 1
+!s100 2ZYN?WKhEIm2JARi>gP=?1
+R3
+IB1EkLVBaJb@<X^_E_nNbY2
+R4
+S1
+R0
+w1631334919
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/aluWithDisplays.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/aluWithDisplays.sv
+!i122 15
+L0 1 13
+R6
+r1
+!s85 0
+31
+Z12 !s108 1631639879.000000
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/aluWithDisplays.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/aluWithDisplays.sv|
+!i113 1
+R8
+R9
+R10
+nalu@with@displays
+vAndGate
+R1
+Z13 !s110 1631639876
+!i10b 1
+!s100 [2IocP]UI6kV=SZQlma8=0
+R3
+IjCD4J=[X^1@[^=0FnQ[?A2
+R4
+S1
+R0
+w1617782572
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/AndGate.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/AndGate.sv
+!i122 0
+Z14 L0 1 7
+R6
+r1
+!s85 0
+31
+Z15 !s108 1631639876.000000
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/AndGate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/AndGate.sv|
+!i113 1
+R8
+R9
+R10
+n@and@gate
+vflagsControls
+R1
+R11
+!i10b 1
+!s100 <;m_6BYm;iX3lI<jcUQ;;1
+R3
+IOMC1FoR1YhiUO@I2<7aLJ3
+R4
+S1
+R0
+w1618287418
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/flagsControls.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/flagsControls.sv
+!i122 12
+L0 1 33
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/flagsControls.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/flagsControls.sv|
+!i113 1
+R8
+R9
+R10
+nflags@controls
+vmuxResults
+R1
+R2
+!i10b 1
+!s100 n29>gndd=^ME]=]=kbiXJ3
+R3
+IGJ?X8f=G_izEIViC]h85H2
+R4
+S1
+R0
+w1631333359
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/muxResults.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/muxResults.sv
+!i122 8
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/muxResults.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/muxResults.sv|
+!i113 1
+R8
+R9
+R10
+nmux@results
+vOrGate
+R1
+R13
+!i10b 1
+!s100 hgVVCTeB=3UGzDjR321mE0
+R3
+IM9AVcHR=8ZXl7PBInU::O0
+R4
+S1
+R0
+Z16 w1617777760
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/OrGate.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/OrGate.sv
+!i122 1
+R14
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/OrGate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/OrGate.sv|
+!i113 1
+R8
+R9
+R10
+n@or@gate
+vrestadorCompletoCuatroBits
+R1
+R2
+!i10b 1
+!s100 oHE1>WSC6cSh`76`?@O5E2
+R3
+IBcC8VdnfU>Y8geWgDjcjO3
+R4
+S1
+R0
+w1618191723
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoCuatroBits.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoCuatroBits.sv
+!i122 7
+Z17 L0 1 12
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoCuatroBits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoCuatroBits.sv|
+!i113 1
+R8
+R9
+R10
+nrestador@completo@cuatro@bits
+vrestadorCompletoParteA
+R1
+Z18 !s110 1631639877
+!i10b 1
+!s100 C9_E=h2QKUbd1bAmNfee[3
+R3
+IA5iODT`eo`<TIEaAVC_?D1
+R4
+S1
+R0
+w1617770298
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoParteA.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoParteA.sv
+!i122 5
+Z19 L0 1 9
+R6
+r1
+!s85 0
+31
+Z20 !s108 1631639877.000000
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoParteA.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoParteA.sv|
+!i113 1
+R8
+R9
+R10
+nrestador@completo@parte@a
+vrestadorCompletoParteB
+R1
+R2
+!i10b 1
+!s100 nelGTm@FVoAzD^EMPJeg[0
+R3
+IekAcCa@Fe8oj8=hz54]Ro1
+R4
+S1
+R0
+w1617829799
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoParteB.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoParteB.sv
+!i122 6
+R17
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoParteB.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/restadorCompletoParteB.sv|
+!i113 1
+R8
+R9
+R10
+nrestador@completo@parte@b
+vshiftLeft
+R1
+R11
+!i10b 1
+!s100 JPZ;o=7L4YN=J5XA>NKJW2
+R3
+I;CJ[k=miBd<_HbAIf==PT3
+R4
+S1
+R0
+R16
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/shiftLeft.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/shiftLeft.sv
+!i122 11
+L0 2 15
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/shiftLeft.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/shiftLeft.sv|
+!i113 1
+R8
+R9
+R10
+nshift@left
+vshiftRight
+R1
+R2
+!i10b 1
+!s100 lLo8=?X]b[W1^gN^b[>4]3
+R3
+IKfISKWeM;j]:UPPRnhXaT3
+R4
+S1
+R0
+R16
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/shiftRight.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/shiftRight.sv
+!i122 10
+L0 2 14
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/shiftRight.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/shiftRight.sv|
+!i113 1
+R8
+R9
+R10
+nshift@right
+vsignDisplay
+R1
+R11
+!i10b 1
+!s100 c3AM1@S:A2UF57PJkUg4l3
+R3
+I>Kf64_<4?`<3Y?mz;zFXI3
+R4
+S1
+R0
+w1618287911
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/signDisplay.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/signDisplay.sv
+!i122 14
+L0 1 11
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/signDisplay.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/signDisplay.sv|
+!i113 1
+R8
+R9
+R10
+nsign@display
+vsumadorCompletoCuatroBits
+R1
+R18
+!i10b 1
+!s100 g>5W`;J`KD9;bom0b6j2d2
+R3
+IQ<`_62nH<b_hO=Ym1PSnn0
+R4
+S1
+R0
+w1617724991
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/sumadorCompletoCuatroBits.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/sumadorCompletoCuatroBits.sv
+!i122 4
+L0 1 14
+R6
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/sumadorCompletoCuatroBits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/sumadorCompletoCuatroBits.sv|
+!i113 1
+R8
+R9
+R10
+nsumador@completo@cuatro@bits
+vsumadorCompletoUnBit
+R1
+R18
+!i10b 1
+!s100 7;QzZC[4Dh46N?fai]OZZ2
+R3
+IeLhEIRXWYog[91QE6IZd]2
+R4
+S1
+R0
+w1617724055
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/sumadorCompletoUnBit.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/sumadorCompletoUnBit.sv
+!i122 3
+R19
+R6
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/sumadorCompletoUnBit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/sumadorCompletoUnBit.sv|
+!i113 1
+R8
+R9
+R10
+nsumador@completo@un@bit
+vtestALU
+R1
+!s110 1631639880
+!i10b 1
+!s100 Y0Tm19[jV81RH=TTPb6<Y0
+R3
+I3zbZ0eo[LD>_8R30I?=g62
+R4
+S1
+R0
+w1618289392
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/testALU.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/testALU.sv
+!i122 16
+L0 1 241
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/testALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/testALU.sv|
+!i113 1
+R8
+R9
+R10
+ntest@a@l@u
+vtwoDisplaysNumbers
+R1
+R11
+!i10b 1
+!s100 cncaO[kRg^IEHD4BT>0Va2
+R3
+Ie725l6VZ<ID5Il@VNe]RX0
+R4
+S1
+R0
+w1618280274
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/twoDisplaysNumbers.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/twoDisplaysNumbers.sv
+!i122 13
+L0 1 24
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/twoDisplaysNumbers.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/twoDisplaysNumbers.sv|
+!i113 1
+R8
+R9
+R10
+ntwo@displays@numbers
+vXorGate
+R1
+R18
+!i10b 1
+!s100 dA5Y@O7YGGao>ONP9lYQn1
+R3
+I`h]YdDeL=XZVB<IWf<Y322
+R4
+S1
+R0
+w1617832492
+8C:/Users/User/Downloads/Problema1-ALU/Problema1/XorGate.sv
+FC:/Users/User/Downloads/Problema1-ALU/Problema1/XorGate.sv
+!i122 2
+L0 1 6
+R6
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/User/Downloads/Problema1-ALU/Problema1/XorGate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Downloads/Problema1-ALU/Problema1|C:/Users/User/Downloads/Problema1-ALU/Problema1/XorGate.sv|
+!i113 1
+R8
+R9
+R10
+n@xor@gate

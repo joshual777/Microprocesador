@@ -1,0 +1,31 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/AndGate.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/OrGate.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/XorGate.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/division.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/multiplicacion.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/sumadorCompletoUnBit.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/sumadorCompletoCuatroBits.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/modulo.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/restadorCompletoParteA.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/restadorCompletoParteB.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/restadorCompletoCuatroBits.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/muxResults.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/ALU.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/shiftRight.sv}
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/shiftLeft.sv}
+
+vlog -sv -work work +incdir+C:/Users/Gerald\ Salazar/OneDrive/Escritorio/Problema1\ (1)/Problema1 {C:/Users/Gerald Salazar/OneDrive/Escritorio/Problema1 (1)/Problema1/testALU.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  testALU
+
+add wave *
+view structure
+view signals
+run -all

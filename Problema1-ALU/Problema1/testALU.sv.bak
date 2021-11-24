@@ -1,0 +1,28 @@
+module testALU();
+	parameter n = 4;
+	reg [n-1:0] a, b;
+	reg [n-1:0] select;
+	wire [n-1:0] out;
+	
+	
+	Alu ALU(.a(a), .b(b), .select(select), .outMux(out));
+							
+	initial begin
+		a = 'b0000;
+		b = 'b0001;
+		select = 'b0000; //Suma
+		#10;
+		if(out !== 'b0001) $display("Suma erronea.");
+		
+		select = 'b0001; //Suma
+		#10;
+		if(out !== 'b0001) $display("Suma erronea.");
+		
+		select = 'b0010; //
+		#10;
+		if(out !== 'b0001) $display("Suma erronea.");
+		
+		
+	end
+	
+endmodule 

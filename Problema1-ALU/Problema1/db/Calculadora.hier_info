@@ -1,0 +1,405 @@
+|aluWithDisplays
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+select[0] => _.IN1
+select[1] => select[1].IN1
+select[2] => select[2].IN1
+displayOfNumbers[0] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[1] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[2] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[3] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[4] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[5] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[6] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[7] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[8] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[9] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[10] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[11] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[12] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfNumbers[13] <= twoDisplaysNumbers:numberDisplays.port1
+displayOfFlags[0] <= signDisplay:flagDisplay.port1
+displayOfFlags[1] <= signDisplay:flagDisplay.port1
+displayOfFlags[2] <= signDisplay:flagDisplay.port1
+displayOfFlags[3] <= signDisplay:flagDisplay.port1
+displayOfFlags[4] <= signDisplay:flagDisplay.port1
+displayOfFlags[5] <= signDisplay:flagDisplay.port1
+displayOfFlags[6] <= signDisplay:flagDisplay.port1
+
+
+|aluWithDisplays|ALU:alu
+a[0] => a[0].IN7
+a[1] => a[1].IN7
+a[2] => a[2].IN7
+a[3] => a[3].IN7
+b[0] => b[0].IN5
+b[1] => b[1].IN5
+b[2] => b[2].IN5
+b[3] => b[3].IN5
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN2
+outMux[0] <= muxResults:muxR.port8
+outMux[1] <= muxResults:muxR.port8
+outMux[2] <= muxResults:muxR.port8
+outMux[3] <= muxResults:muxR.port8
+Cout <= flagsControls:flags.port4
+NegFlag <= flagsControls:flags.port5
+zeroFlag <= flagsControls:flags.port6
+
+
+|aluWithDisplays|ALU:alu|sumadorCompletoCuatroBits:x0
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+R[0] <= sumadorCompletoUnBit:S0.port3
+R[1] <= sumadorCompletoUnBit:S1.port3
+R[2] <= sumadorCompletoUnBit:S2.port3
+R[3] <= sumadorCompletoUnBit:S3.port3
+Cout <= sumadorCompletoUnBit:S3.port4
+
+
+|aluWithDisplays|ALU:alu|sumadorCompletoCuatroBits:x0|sumadorCompletoUnBit:S0
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|sumadorCompletoCuatroBits:x0|sumadorCompletoUnBit:S1
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|sumadorCompletoCuatroBits:x0|sumadorCompletoUnBit:S2
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|sumadorCompletoCuatroBits:x0|sumadorCompletoUnBit:S3
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|restadorCompletoCuatroBits:x1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+R[0] <= restadorCompletoParteB:resB.port2
+R[1] <= restadorCompletoParteB:resB.port2
+R[2] <= restadorCompletoParteB:resB.port2
+R[3] <= restadorCompletoParteB:resB.port2
+NegFlag <= restadorCompletoParteB:resB.port3
+zeroFlag <= restadorCompletoParteB:resB.port4
+
+
+|aluWithDisplays|ALU:alu|restadorCompletoCuatroBits:x1|restadorCompletoParteA:resA
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => _.IN1
+B[1] => _.IN1
+B[2] => _.IN1
+B[3] => _.IN1
+R[0] <= sumadorCompletoCuatroBits:fullAdder4Bits.port3
+R[1] <= sumadorCompletoCuatroBits:fullAdder4Bits.port3
+R[2] <= sumadorCompletoCuatroBits:fullAdder4Bits.port3
+R[3] <= sumadorCompletoCuatroBits:fullAdder4Bits.port3
+Cout <= sumadorCompletoCuatroBits:fullAdder4Bits.port4
+
+
+|aluWithDisplays|ALU:alu|restadorCompletoCuatroBits:x1|restadorCompletoParteA:resA|sumadorCompletoCuatroBits:fullAdder4Bits
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+R[0] <= sumadorCompletoUnBit:S0.port3
+R[1] <= sumadorCompletoUnBit:S1.port3
+R[2] <= sumadorCompletoUnBit:S2.port3
+R[3] <= sumadorCompletoUnBit:S3.port3
+Cout <= sumadorCompletoUnBit:S3.port4
+
+
+|aluWithDisplays|ALU:alu|restadorCompletoCuatroBits:x1|restadorCompletoParteA:resA|sumadorCompletoCuatroBits:fullAdder4Bits|sumadorCompletoUnBit:S0
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|restadorCompletoCuatroBits:x1|restadorCompletoParteA:resA|sumadorCompletoCuatroBits:fullAdder4Bits|sumadorCompletoUnBit:S1
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|restadorCompletoCuatroBits:x1|restadorCompletoParteA:resA|sumadorCompletoCuatroBits:fullAdder4Bits|sumadorCompletoUnBit:S2
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|restadorCompletoCuatroBits:x1|restadorCompletoParteA:resA|sumadorCompletoCuatroBits:fullAdder4Bits|sumadorCompletoUnBit:S3
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|restadorCompletoCuatroBits:x1|restadorCompletoParteB:resB
+RParteA[0] => RF.DATAB
+RParteA[0] => Add0.IN8
+RParteA[0] => zeroFlag.IN1
+RParteA[1] => RF.DATAB
+RParteA[1] => Add0.IN7
+RParteA[1] => zeroFlag.IN1
+RParteA[2] => RF.DATAB
+RParteA[2] => Add0.IN6
+RParteA[2] => zeroFlag.IN0
+RParteA[3] => RF.DATAB
+RParteA[3] => Add0.IN5
+RParteA[3] => zeroFlag.IN1
+CoutParteA => RF.OUTPUTSELECT
+CoutParteA => RF.OUTPUTSELECT
+CoutParteA => RF.OUTPUTSELECT
+CoutParteA => RF.OUTPUTSELECT
+CoutParteA => NegFlag.DATAIN
+RF[0] <= RF.DB_MAX_OUTPUT_PORT_TYPE
+RF[1] <= RF.DB_MAX_OUTPUT_PORT_TYPE
+RF[2] <= RF.DB_MAX_OUTPUT_PORT_TYPE
+RF[3] <= RF.DB_MAX_OUTPUT_PORT_TYPE
+NegFlag <= CoutParteA.DB_MAX_OUTPUT_PORT_TYPE
+zeroFlag <= zeroFlag.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|AndGate:x5
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|OrGate:x6
+d1[0] => out.IN0
+d1[1] => out.IN0
+d1[2] => out.IN0
+d1[3] => out.IN0
+d2[0] => out.IN1
+d2[1] => out.IN1
+d2[2] => out.IN1
+d2[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|XorGate:x7
+d1[0] => out.IN0
+d1[1] => out.IN0
+d1[2] => out.IN0
+d1[3] => out.IN0
+d2[0] => out.IN1
+d2[1] => out.IN1
+d2[2] => out.IN1
+d2[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|shiftLeft:x8
+a[0] => out[1].DATAIN
+a[1] => out[2].DATAIN
+a[2] => out[3].DATAIN
+a[3] => ~NO_FANOUT~
+out[0] <= <GND>
+out[1] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|shiftRight:x9
+a[0] => ~NO_FANOUT~
+a[1] => out[0].DATAIN
+a[2] => out[1].DATAIN
+a[3] => out[2].DATAIN
+out[0] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= <GND>
+
+
+|aluWithDisplays|ALU:alu|flagsControls:flags
+CarryFlag => CarryFlagOut.DATAB
+NegFlag => NegFlagOut.DATAB
+EqualFlag => EqualFlagOut.DATAB
+Selector[0] => Equal0.IN7
+Selector[0] => Equal1.IN7
+Selector[1] => Equal0.IN6
+Selector[1] => Equal1.IN6
+Selector[2] => Equal0.IN5
+Selector[2] => Equal1.IN5
+Selector[3] => Equal0.IN4
+Selector[3] => Equal1.IN4
+CarryFlagOut <= CarryFlagOut.DB_MAX_OUTPUT_PORT_TYPE
+NegFlagOut <= NegFlagOut.DB_MAX_OUTPUT_PORT_TYPE
+EqualFlagOut <= EqualFlagOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|ALU:alu|muxResults:muxR
+input0[0] => Mux3.IN1
+input0[1] => Mux2.IN1
+input0[2] => Mux1.IN1
+input0[3] => Mux0.IN1
+input1[0] => Mux3.IN2
+input1[1] => Mux2.IN2
+input1[2] => Mux1.IN2
+input1[3] => Mux0.IN2
+input2[0] => Mux3.IN3
+input2[1] => Mux2.IN3
+input2[2] => Mux1.IN3
+input2[3] => Mux0.IN3
+input3[0] => Mux3.IN4
+input3[1] => Mux2.IN4
+input3[2] => Mux1.IN4
+input3[3] => Mux0.IN4
+input4[0] => Mux3.IN5
+input4[1] => Mux2.IN5
+input4[2] => Mux1.IN5
+input4[3] => Mux0.IN5
+input5[0] => Mux3.IN6
+input5[1] => Mux2.IN6
+input5[2] => Mux1.IN6
+input5[3] => Mux0.IN6
+input6[0] => Mux3.IN7
+input6[1] => Mux2.IN7
+input6[2] => Mux1.IN7
+input6[3] => Mux0.IN7
+selector[0] => Mux0.IN10
+selector[0] => Mux1.IN10
+selector[0] => Mux2.IN10
+selector[0] => Mux3.IN10
+selector[1] => Mux0.IN9
+selector[1] => Mux1.IN9
+selector[1] => Mux2.IN9
+selector[1] => Mux3.IN9
+selector[2] => Mux0.IN8
+selector[2] => Mux1.IN8
+selector[2] => Mux2.IN8
+selector[2] => Mux3.IN8
+out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|twoDisplaysNumbers:numberDisplays
+in[0] => Decoder1.IN3
+in[1] => Decoder0.IN2
+in[1] => Decoder1.IN2
+in[2] => Decoder0.IN1
+in[2] => Decoder1.IN1
+in[3] => Decoder0.IN0
+in[3] => Decoder1.IN0
+displays[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+displays[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+displays[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+displays[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+displays[4] <= displays.DB_MAX_OUTPUT_PORT_TYPE
+displays[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+displays[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+displays[7] <= <VCC>
+displays[8] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+displays[9] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+displays[10] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+displays[11] <= <GND>
+displays[12] <= <GND>
+displays[13] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aluWithDisplays|signDisplay:flagDisplay
+flags_C_N_Z[0] => Decoder0.IN2
+flags_C_N_Z[1] => Decoder0.IN1
+flags_C_N_Z[2] => Decoder0.IN0
+displays[0] <= displays.DB_MAX_OUTPUT_PORT_TYPE
+displays[1] <= <VCC>
+displays[2] <= <VCC>
+displays[3] <= displays.DB_MAX_OUTPUT_PORT_TYPE
+displays[4] <= displays.DB_MAX_OUTPUT_PORT_TYPE
+displays[5] <= displays.DB_MAX_OUTPUT_PORT_TYPE
+displays[6] <= displays.DB_MAX_OUTPUT_PORT_TYPE
+
+

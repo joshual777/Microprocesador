@@ -1,0 +1,28 @@
+module ALU(a, b, select);
+
+	parameter n=8;
+	
+	input logic [n-1:0] a;
+	input logic [n-1:0] b;
+	
+	input logic [n-1:0] select;
+	
+	
+		 //llamados de los modulos
+	//suma_mod x1 (a,b,outSuma,C);
+	//resta_mod x2 (a,b,outResta,C);
+	multiplicacion x3 (a,b,outMulti);
+	division x4 (a,b,outDiv);S
+	modulo x5 (a,b,outModulo);
+	AndGate x6 (a,b,outAnd);
+	OrGate x7 (a,b,outOr);
+	XorGate x8 (a,b,outXor);
+	shiftLeft x9 (a,b,outShiftL);
+	shiftRight x10 (a,b,outShiftR);
+	
+	
+	 
+	 
+	 
+	 
+endmodule 

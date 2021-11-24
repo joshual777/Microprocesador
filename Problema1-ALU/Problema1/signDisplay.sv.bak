@@ -1,0 +1,12 @@
+module signDisplay(input logic [2:0] flags_C_N_Z, output logic [6:0] displays);			
+	always_comb			
+		case(flags_C_N_Z)
+			//  				13-12-11-10-9-8-7-6-5-4-3-2-1-0
+			//								     0123456
+			3'b001:			displays = 7'b0110000; // Desplejar una E de Equals
+			3'b010:			displays = 7'b1111110; // Desplejar un minus sign (-)
+			3'b100:			displays = 7'b0011000; // Desplejar una P de Positive
+			
+			default: 		displays = 7'b0000000; // Si es un valor diferente todos se encienden
+		endcase
+endmodule

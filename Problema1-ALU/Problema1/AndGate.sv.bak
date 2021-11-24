@@ -1,0 +1,11 @@
+module AndGate(a,b,y);
+
+//-- Parametro:
+parameter N = 8;     //-- Número de bits del registro
+
+input wire [N-1:0] a,b;
+output reg [N-1:0] y;
+
+assign y=a&b;
+
+endmodule

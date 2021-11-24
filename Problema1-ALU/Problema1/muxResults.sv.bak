@@ -1,0 +1,39 @@
+module muxResults(opOutputs, select, out);
+	 
+	 //-- Entradas:
+	 input [9:0] opOutputs;
+    input [3:0] select;
+	 
+	 //-- Salidas:
+    output reg [9:0] out;
+	 
+	 
+	 //Seleccion de salida
+	 always @()
+    begin
+        case(select)
+        4'b0001: // Suma
+			 out <= opOutputs[0];
+        4'b0010: // Resta
+			 out <= opOutputs[1];
+        4'b0011: // Multiplicacion
+			 out <= opOutputs[2];
+        4'b0100: // Division
+			 out <= opOutputs[3];
+		  4'b0101: // Modulo
+			 out <= opOutputs[4];
+		  4'b1001: //  Logical and
+			 out <= opOutputs[5];
+        4'b1010: //  Logical or
+			 out <= opOutputs[6];
+        4'b1011: //  Logical xor
+			 out <= opOutputs[7];
+        4'b1100: // Logical shift left
+			 out <= opOutputs[8];
+        4'b1101: // Logical shift right
+			 out <= opOutputs[9];
+		    default: out <= outSuma; 
+        endcase
+    end
+	 
+endmodule
