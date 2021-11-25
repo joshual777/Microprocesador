@@ -1,5 +1,5 @@
 Flow report for ProcesadorARM
-Wed Nov 24 22:41:56 2021
+Thu Nov 25 10:39:11 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Nov 24 22:41:56 2021       ;
+; Flow Status                     ; Successful - Thu Nov 25 10:39:11 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ProcesadorARM                               ;
-; Top-level Entity Name           ; arm                                         ;
+; Top-level Entity Name           ; mux4a1                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 10                                          ;
+; Total pins                      ; 22                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2021 22:41:35 ;
+; Start date & time ; 11/25/2021 10:38:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProcesadorARM       ;
 +-------------------+---------------------+
@@ -79,39 +79,51 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 91769767436.163781529504720            ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 91771128616.163785833214124            ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux2Test                          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; procesadorTest                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; conditionCheckTest                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; armTest                           ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ALUConFlagsTest                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; decoderTest                       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; controllerTest                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; datapathTest                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux4a1Test                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; conditionalLogicTest              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; extendTest                        ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; procesadorTest                         ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mux4a1Test                             ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; mux2Test.sv                            ; --            ; --          ; mux2Test                          ;
 ; EDA_TEST_BENCH_FILE                  ; procesadorTest.sv                      ; --            ; --          ; procesadorTest                    ;
 ; EDA_TEST_BENCH_FILE                  ; conditionCheckTest.sv                  ; --            ; --          ; conditionCheckTest                ;
 ; EDA_TEST_BENCH_FILE                  ; procesadorTest.sv                      ; --            ; --          ; armTest                           ;
+; EDA_TEST_BENCH_FILE                  ; ALUConFlagsTest.sv                     ; --            ; --          ; ALUConFlagsTest                   ;
 ; EDA_TEST_BENCH_FILE                  ; decoderTest.sv                         ; --            ; --          ; decoderTest                       ;
 ; EDA_TEST_BENCH_FILE                  ; decoderTest.sv                         ; --            ; --          ; controllerTest                    ;
 ; EDA_TEST_BENCH_FILE                  ; controllerTest.sv                      ; --            ; --          ; controllerTest                    ;
 ; EDA_TEST_BENCH_FILE                  ; datapathTest.sv                        ; --            ; --          ; datapathTest                      ;
+; EDA_TEST_BENCH_FILE                  ; mux4a1Test.sv                          ; --            ; --          ; mux4a1Test                        ;
 ; EDA_TEST_BENCH_FILE                  ; decoderTest.sv                         ; --            ; --          ; conditionalLogicTest              ;
 ; EDA_TEST_BENCH_FILE                  ; controller.sv                          ; --            ; --          ; conditionalLogicTest              ;
 ; EDA_TEST_BENCH_FILE                  ; conditionalLogicTest.sv                ; --            ; --          ; conditionalLogicTest              ;
+; EDA_TEST_BENCH_FILE                  ; extendTest.sv                          ; --            ; --          ; extendTest                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux2Test                               ; --            ; --          ; mux2Test                          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; procesadorTest                         ; --            ; --          ; procesadorTest                    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; conditionCheckTest                     ; --            ; --          ; conditionCheckTest                ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; armTest                                ; --            ; --          ; armTest                           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ALUConFlagsTest                        ; --            ; --          ; ALUConFlagsTest                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; decoderTest                            ; --            ; --          ; decoderTest                       ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; controllerTest                         ; --            ; --          ; controllerTest                    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; datapathTest                           ; --            ; --          ; datapathTest                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux4a1Test                             ; --            ; --          ; mux4a1Test                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; conditionalLogicTest                   ; --            ; --          ; conditionalLogicTest              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; extendTest                             ; --            ; --          ; extendTest                        ;
 ; EDA_TEST_BENCH_NAME                  ; armTest                                ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; conditionalLogicTest                   ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; controllerTest                         ; --            ; --          ; eda_simulation                    ;
@@ -119,18 +131,22 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; conditionCheckTest                     ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; datapathTest                           ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; procesadorTest                         ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; mux2Test                               ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; mux4a1Test                             ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; extendTest                             ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; ALUConFlagsTest                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
 ; MISC_FILE                            ; RAM_bb.v                               ; --            ; --          ; --                                ;
 ; MISC_FILE                            ; ROM_bb.v                               ; --            ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; arm         ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; arm         ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; arm         ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; mux4a1      ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; mux4a1      ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; mux4a1      ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; arm                                    ; ProcesadorARM ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; mux4a1                                 ; ProcesadorARM ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -139,8 +155,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4781 MB             ; 00:00:54                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:54                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4811 MB             ; 00:00:48                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

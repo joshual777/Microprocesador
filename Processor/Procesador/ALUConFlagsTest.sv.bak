@@ -1,0 +1,28 @@
+module ALUConFlagsTest();
+
+	logic [31:0] A, B;
+	logic [1:0] ALUControl;
+	logic [31:0] out;
+	logic [3:0] ALUFlags;
+					
+
+	
+	// instantiate device to be tested
+	ALUConFlags ALUConFlagsForTest(A, B,ALUControl,out,
+			  ALUFlags);
+	
+	
+	initial begin 		
+		
+		
+		#10; 
+		A = 32'b00000001; 
+		B = 32'b10000001;
+		ALUControl	= 2'b00;
+		
+		
+	end
+			  
+	
+	
+endmodule

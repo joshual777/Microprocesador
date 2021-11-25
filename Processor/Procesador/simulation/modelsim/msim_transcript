@@ -3,224 +3,54 @@
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
+# couldn't create error file for command: permission denied
 # vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoder.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:02 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoder.sv 
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 22:48:02 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionalLogic.sv}
-# couldn't create error file for command: permission denied
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheck.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:03 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheck.sv 
-# -- Compiling module conditionCheck
-# 
-# Top level modules:
-# 	conditionCheck
-# End time: 22:48:03 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:03 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv 
-# -- Compiling module controller
-# 
-# Top level modules:
-# 	controller
-# End time: 22:48:04 on Nov 24,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopenr.sv}
-# couldn't create error file for command: permission denied
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:04 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv 
-# -- Compiling module datapath
-# 
-# Top level modules:
-# 	datapath
-# End time: 22:48:04 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopr.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:04 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopr.sv 
-# -- Compiling module flopr
-# 
-# Top level modules:
-# 	flopr
-# End time: 22:48:04 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/instructionMemory.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:04 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/instructionMemory.sv 
-# -- Compiling module instructionMemory
-# 
-# Top level modules:
-# 	instructionMemory
-# End time: 22:48:04 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adder.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:04 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adder.sv 
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# End time: 22:48:05 on Nov 24,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:05 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2.sv 
-# -- Compiling module mux2
-# 
-# Top level modules:
-# 	mux2
-# End time: 22:48:05 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/regfile.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:05 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/regfile.sv 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 22:48:05 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extend.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:05 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extend.sv 
-# -- Compiling module extend
-# 
-# Top level modules:
-# 	extend
-# End time: 22:48:05 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlags.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:05 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlags.sv 
-# -- Compiling module ALUConFlags
-# 
-# Top level modules:
-# 	ALUConFlags
-# End time: 22:48:05 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUSinFlags.sv}
-# couldn't create error file for command: permission denied
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adderWithCarry.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:06 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adderWithCarry.sv 
-# -- Compiling module adderWithCarry
-# 
-# Top level modules:
-# 	adderWithCarry
-# End time: 22:48:06 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/xorGate.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:06 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/xorGate.sv 
-# -- Compiling module xorGate
-# 
-# Top level modules:
-# 	xorGate
-# End time: 22:48:06 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/inv.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:06 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/inv.sv 
-# -- Compiling module inv
-# 
-# Top level modules:
-# 	inv
-# End time: 22:48:06 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:06 on Nov 24,2021
+# Start time: 10:39:43 on Nov 25,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv 
 # -- Compiling module mux4a1
 # 
 # Top level modules:
 # 	mux4a1
-# End time: 22:48:06 on Nov 24,2021, Elapsed time: 0:00:00
+# End time: 10:39:43 on Nov 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv}
+# 
+# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1Test.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:07 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv 
-# -- Compiling module dataMemory
+# Start time: 10:39:43 on Nov 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1Test.sv 
+# -- Compiling module mux4a1Test
 # 
 # Top level modules:
-# 	dataMemory
-# End time: 22:48:07 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv}
-# couldn't create error file for command: permission denied
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:07 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv 
-# -- Compiling module deco_datos
-# 
-# Top level modules:
-# 	deco_datos
-# End time: 22:48:07 on Nov 24,2021, Elapsed time: 0:00:00
+# 	mux4a1Test
+# End time: 10:39:43 on Nov 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador {C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/procesadorTest.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:48:07 on Nov 24,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador" C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/procesadorTest.sv 
-# -- Compiling module procesadorTest
-# 
-# Top level modules:
-# 	procesadorTest
-# End time: 22:48:07 on Nov 24,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  procesadorTest
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" procesadorTest 
-# Start time: 22:48:07 on Nov 24,2021
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  mux4a1Test
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" mux4a1Test 
+# Start time: 10:39:43 on Nov 25,2021
 # Loading sv_std.std
-# Loading work.procesadorTest
-# ** Error: (vsim-3033) Instantiation of 'arm' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /procesadorTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/procesadorTest.sv Line: 8
-#         Searched libraries:
-#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
-#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
-#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
-#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
-#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
-#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev
-#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev_hssi
-#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
-#             C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/simulation/modelsim/rtl_work
-#             C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/simulation/modelsim/rtl_work
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./ProcesadorARM_run_msim_rtl_verilog.do PAUSED at line 32
-# End time: 22:48:13 on Nov 24,2021, Elapsed time: 0:00:06
-# Errors: 1, Warnings: 0
+# Loading work.mux4a1Test
+# Loading work.mux4a1
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Usuario  Hostname: DESKTOP-LGT7EFS  ProcessID: 7824
+#           Attempting to use alternate WLF file "./wlftzs394g".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftzs394g
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 10:40:41 on Nov 25,2021, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 2

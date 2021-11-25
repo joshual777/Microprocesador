@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProcesadorARM
-Wed Nov 24 22:41:56 2021
+Thu Nov 25 10:39:11 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,36 +13,13 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: controller:c|conditionalLogic:cl|flopenr:flagreg1
- 12. Parameter Settings for User Entity Instance: controller:c|conditionalLogic:cl|flopenr:flagreg0
- 13. Parameter Settings for User Entity Instance: datapath:dp|mux2:pcmux
- 14. Parameter Settings for User Entity Instance: datapath:dp|flopr:pcreg
- 15. Parameter Settings for User Entity Instance: datapath:dp|adder:pcadd1
- 16. Parameter Settings for User Entity Instance: datapath:dp|adder:pcadd2
- 17. Parameter Settings for User Entity Instance: datapath:dp|mux2:ra1mux
- 18. Parameter Settings for User Entity Instance: datapath:dp|mux2:ra2mux
- 19. Parameter Settings for User Entity Instance: datapath:dp|mux2:srcbmux
- 20. Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu
- 21. Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags
- 22. Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|mux2:mux2
- 23. Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|adderWithCarry:adderALU
- 24. Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|xorGate:xorAlu
- 25. Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|inv:invAlu
- 26. Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|mux4a1:mux4
- 27. Parameter Settings for User Entity Instance: datapath:dp|mux2:resmux
- 28. Port Connectivity Checks: "datapath:dp|dataMemory:outDataMemory"
- 29. Port Connectivity Checks: "datapath:dp|mux2:ra1mux"
- 30. Port Connectivity Checks: "datapath:dp|adder:pcadd2"
- 31. Port Connectivity Checks: "datapath:dp|adder:pcadd1"
- 32. Port Connectivity Checks: "datapath:dp|instructionMemory:instMem"
- 33. Port Connectivity Checks: "datapath:dp"
- 34. Post-Synthesis Netlist Statistics for Top Partition
- 35. Elapsed Time Per Partition
- 36. Analysis & Synthesis Messages
- 37. Analysis & Synthesis Suppressed Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |mux4a1
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -69,14 +46,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 24 22:41:56 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 25 10:39:11 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ProcesadorARM                               ;
-; Top-level Entity Name           ; arm                                         ;
+; Top-level Entity Name           ; mux4a1                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 10                                          ;
+; Total pins                      ; 22                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -95,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; arm                ; ProcesadorARM      ;
+; Top-level entity name                                                           ; mux4a1             ; ProcesadorARM      ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -192,60 +169,40 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
-; decoder.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoder.sv           ;         ;
-; conditionalLogic.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionalLogic.sv  ;         ;
-; conditionCheck.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheck.sv    ;         ;
-; controller.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv        ;         ;
-; flopenr.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopenr.sv           ;         ;
-; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv          ;         ;
-; flopr.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopr.sv             ;         ;
-; instructionMemory.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/instructionMemory.sv ;         ;
-; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adder.sv             ;         ;
-; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2.sv              ;         ;
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/regfile.sv           ;         ;
-; extend.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extend.sv            ;         ;
-; ALUConFlags.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlags.sv       ;         ;
-; ALUSinFlags.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUSinFlags.sv       ;         ;
-; adderWithCarry.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adderWithCarry.sv    ;         ;
-; xorGate.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/xorGate.sv           ;         ;
-; inv.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/inv.sv               ;         ;
-; mux4a1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv            ;         ;
-; dataMemory.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv        ;         ;
-; arm.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv               ;         ;
-; deco_datos.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv        ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; mux4a1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 10    ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 10    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 4          ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 4          ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 4          ;
+;     -- 5 input functions                    ; 0          ;
+;     -- 4 input functions                    ; 0          ;
+;     -- <=3 input functions                  ; 0          ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 22         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; s[0]~input ;
+; Maximum fan-out                             ; 4          ;
+; Total fan-out                               ; 50         ;
+; Average fan-out                             ; 1.04       ;
++---------------------------------------------+------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -253,34 +210,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |arm                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 10   ; 0            ; |arm                ; arm         ; work         ;
+; |mux4a1                    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 22   ; 0            ; |mux4a1             ; mux4a1      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                ;
-+----------------------------------------------------------+----------------------------------------+
-; Register name                                            ; Reason for Removal                     ;
-+----------------------------------------------------------+----------------------------------------+
-; deco_datos:mostrarDatos|segments[0..3]                   ; Stuck at GND due to stuck port data_in ;
-; deco_datos:mostrarDatos|segments[6]                      ; Stuck at VCC due to stuck port data_in ;
-; deco_datos:mostrarDatos|segments[4,5]                    ; Stuck at GND due to stuck port data_in ;
-; datapath:dp|flopr:pcreg|q[0..31]                         ; Lost fanout                            ;
-; controller:c|conditionalLogic:cl|flopenr:flagreg0|q[0,1] ; Lost fanout                            ;
-; controller:c|conditionalLogic:cl|flopenr:flagreg1|q[0,1] ; Lost fanout                            ;
-; Total Number of Removed Registers = 43                   ;                                        ;
-+----------------------------------------------------------+----------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                  ;
-+-------------------------------+--------------------+---------------------------------------------------------+
-; Register name                 ; Reason for Removal ; Registers Removed due to This Register                  ;
-+-------------------------------+--------------------+---------------------------------------------------------+
-; datapath:dp|flopr:pcreg|q[31] ; Lost Fanouts       ; controller:c|conditionalLogic:cl|flopenr:flagreg0|q[0], ;
-;                               ;                    ; controller:c|conditionalLogic:cl|flopenr:flagreg1|q[1]  ;
-+-------------------------------+--------------------+---------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -298,238 +230,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: controller:c|conditionalLogic:cl|flopenr:flagreg1 ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------+
-; WIDTH          ; 2     ; Signed Integer                                                        ;
-+----------------+-------+-----------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |mux4a1|Mux3               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |mux4a1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: controller:c|conditionalLogic:cl|flopenr:flagreg0 ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------+
-; WIDTH          ; 2     ; Signed Integer                                                        ;
-+----------------+-------+-----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:pcmux ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|flopr:pcreg ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|adder:pcadd1 ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|adder:pcadd2 ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:ra1mux ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:ra2mux ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:srcbmux ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; n              ; 32    ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                          ;
-+----------------+-------+-------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|mux2:mux2 ;
-+----------------+-------+-----------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                                                    ;
-+----------------+-------+-----------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|adderWithCarry:adderALU ;
-+----------------+-------+-------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                            ;
-+----------------+-------+-------------------------------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                                                  ;
-+----------------+-------+-------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|xorGate:xorAlu ;
-+----------------+-------+----------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                   ;
-+----------------+-------+----------------------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                                         ;
-+----------------+-------+----------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|inv:invAlu ;
-+----------------+-------+------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                               ;
-+----------------+-------+------------------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                                     ;
-+----------------+-------+------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|mux4a1:mux4 ;
-+----------------+-------+-------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                                                      ;
-+----------------+-------+-------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:resmux ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|dataMemory:outDataMemory"                                                                                                                                                           ;
-+-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port              ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; wdata             ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (31 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; contadorWriteData ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; contadoReadD      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
-; rdata             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
-+-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|mux2:ra1mux" ;
-+------+-------+----------+---------------------------+
-; Port ; Type  ; Severity ; Details                   ;
-+------+-------+----------+---------------------------+
-; d1   ; Input ; Info     ; Stuck at VCC              ;
-+------+-------+----------+---------------------------+
-
-
-+------------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|adder:pcadd2" ;
-+----------+-------+----------+------------------------+
-; Port     ; Type  ; Severity ; Details                ;
-+----------+-------+----------+------------------------+
-; b[31..3] ; Input ; Info     ; Stuck at GND           ;
-; b[1..0]  ; Input ; Info     ; Stuck at GND           ;
-; b[2]     ; Input ; Info     ; Stuck at VCC           ;
-+----------+-------+----------+------------------------+
-
-
-+------------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|adder:pcadd1" ;
-+----------+-------+----------+------------------------+
-; Port     ; Type  ; Severity ; Details                ;
-+----------+-------+----------+------------------------+
-; b[31..3] ; Input ; Info     ; Stuck at GND           ;
-; b[1..0]  ; Input ; Info     ; Stuck at GND           ;
-; b[2]     ; Input ; Info     ; Stuck at VCC           ;
-+----------+-------+----------+------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|instructionMemory:instMem"                                                                                                                                               ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; address ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp"                                                                                ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; ReadOutData  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; PC           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; Result       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; Instr[11..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -537,13 +254,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 2                           ;
-;     normal            ; 2                           ;
-;         0 data inputs ; 2                           ;
-; boundary_port         ; 10                          ;
+; arriav_lcell_comb     ; 4                           ;
+;     normal            ; 4                           ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 22                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 1.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -562,7 +279,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 24 22:41:35 2021
+    Info: Processing started: Thu Nov 25 10:38:52 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcesadorARM -c ProcesadorARM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -670,93 +387,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file conditi
     Info (12023): Found entity 1: conditionCheckTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheckTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapathtest.sv
     Info (12023): Found entity 1: datapathTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapathTest.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux2test.sv
+    Info (12023): Found entity 1: mux2Test File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2Test.sv Line: 1
+Warning (10229): Verilog HDL Expression warning at extendTest.sv(18): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 18
+Warning (10229): Verilog HDL Expression warning at extendTest.sv(21): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 21
+Warning (10229): Verilog HDL Expression warning at extendTest.sv(24): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 24
+Warning (10229): Verilog HDL Expression warning at extendTest.sv(27): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file extendtest.sv
+    Info (12023): Found entity 1: extendTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file aluconflagstest.sv
+    Info (12023): Found entity 1: ALUConFlagsTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlagsTest.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4a1test.sv
+    Info (12023): Found entity 1: mux4a1Test File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1Test.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at decoderTest.sv(15): created implicit net for "Flagw" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoderTest.sv Line: 15
 Warning (10236): Verilog HDL Implicit Net warning at conditionalLogicTest.sv(13): created implicit net for "Flagw" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionalLogicTest.sv Line: 13
-Info (12127): Elaborating entity "arm" for the top level hierarchy
-Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 26
-Info (12128): Elaborating entity "decoder" for hierarchy "controller:c|decoder:dec" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv Line: 25
-Info (12128): Elaborating entity "conditionalLogic" for hierarchy "controller:c|conditionalLogic:cl" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv Line: 29
-Info (12128): Elaborating entity "flopenr" for hierarchy "controller:c|conditionalLogic:cl|flopenr:flagreg1" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionalLogic.sv Line: 15
-Info (12128): Elaborating entity "conditionCheck" for hierarchy "controller:c|conditionalLogic:cl|conditionCheck:condCheck" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionalLogic.sv Line: 19
-Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 40
-Warning (10034): Output port "rdataForVga" at datapath.sv(11) has no driver File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 11
-Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:pcmux" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 20
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:pcreg" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 21
-Info (12128): Elaborating entity "instructionMemory" for hierarchy "datapath:dp|instructionMemory:instMem" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 23
-Info (12128): Elaborating entity "adder" for hierarchy "datapath:dp|adder:pcadd1" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 25
-Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:ra1mux" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 29
-Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|regfile:rf" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 34
-Info (12128): Elaborating entity "extend" for hierarchy "datapath:dp|extend:ext" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 35
-Info (12128): Elaborating entity "ALUConFlags" for hierarchy "datapath:dp|ALUConFlags:alu" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 39
-Info (12128): Elaborating entity "ALUSinFlags" for hierarchy "datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlags.sv Line: 20
-Info (12128): Elaborating entity "adderWithCarry" for hierarchy "datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|adderWithCarry:adderALU" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUSinFlags.sv Line: 20
-Info (12128): Elaborating entity "xorGate" for hierarchy "datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|xorGate:xorAlu" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUSinFlags.sv Line: 21
-Info (12128): Elaborating entity "inv" for hierarchy "datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|inv:invAlu" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUSinFlags.sv Line: 22
-Info (12128): Elaborating entity "mux4a1" for hierarchy "datapath:dp|ALUConFlags:alu|ALUSinFlags:aluSinFlags|mux4a1:mux4" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUSinFlags.sv Line: 23
-Info (12128): Elaborating entity "dataMemory" for hierarchy "datapath:dp|dataMemory:outDataMemory" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 41
-Warning (10230): Verilog HDL assignment warning at dataMemory.sv(24): truncated value with size 32 to match size of target (31) File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv Line: 24
-Warning (10034): Output port "contadoReadD" at dataMemory.sv(11) has no driver File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv Line: 11
-Info (12128): Elaborating entity "deco_datos" for hierarchy "deco_datos:mostrarDatos" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 43
-Warning (10762): Verilog HDL Case Statement warning at deco_datos.sv(19): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv Line: 19
-Warning (10230): Verilog HDL assignment warning at deco_datos.sv(30): truncated value with size 32 to match size of target (8) File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv Line: 30
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datapath:dp|ReadOutData[31]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[30]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[29]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[28]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[27]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[26]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[25]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[24]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[23]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[22]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[21]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[20]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[19]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[18]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[17]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[16]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[15]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[14]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[13]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[12]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[11]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[10]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[9]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[8]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[7]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[6]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[5]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[4]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[3]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[2]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[1]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-    Warning (12110): Net "datapath:dp|ReadOutData[0]" is missing source, defaulting to GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 12
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "segments[0]" is stuck at GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 10
-    Warning (13410): Pin "segments[1]" is stuck at GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 10
-    Warning (13410): Pin "segments[2]" is stuck at GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 10
-    Warning (13410): Pin "segments[3]" is stuck at GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 10
-    Warning (13410): Pin "segments[4]" is stuck at GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 10
-    Warning (13410): Pin "segments[5]" is stuck at GND File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 10
-    Warning (13410): Pin "segments[6]" is stuck at VCC File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 10
-Info (17049): 36 registers lost all their fanouts during netlist optimizations.
+Info (12127): Elaborating entity "mux4a1" for the top level hierarchy
+Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/output_files/ProcesadorARM.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 1
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 1
-    Warning (15610): No output dependent on input pin "mostrarLetra" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 1
-Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 7 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 100 warnings
-    Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Wed Nov 24 22:41:56 2021
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:54
+Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 4 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Thu Nov 25 10:39:11 2021
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:49
 
 
 +------------------------------------------+
