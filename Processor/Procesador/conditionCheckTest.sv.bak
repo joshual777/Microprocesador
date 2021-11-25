@@ -1,0 +1,38 @@
+module conditionCheckTest();
+
+	logic [3:0] Cond;
+	logic [3:0] Flags;
+	logic CondEx;
+
+	// instantiate device to be tested
+	 conditionCheck conditionCheckForTest(Cond, Flags,
+			  CondEx);
+
+	
+	
+	initial begin 		
+		reset = 1; #1; reset = 0; #4; //Se resetea los registros que permiten o no la actualizacion de los flags.
+		clk = 0; #5;
+		
+		#10; 
+		Cond = 4'b0000; 
+		Flags = 4'b0001; 
+		#10; 
+		Cond = 4'b0010; 
+		Flags = 4'b0001;
+		#10; 
+		Cond = 4'b1000; 
+		Flags = 4'b0001;
+		#10; 
+		Cond = 4'b0000; 
+		Flags = 4'b0001;
+		#10; 
+		Cond = 4'b0010; 
+		Flags = 4'b0011;
+		
+		
+	end
+			  
+	
+	
+endmodule

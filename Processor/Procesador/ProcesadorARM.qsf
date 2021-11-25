@@ -57,11 +57,10 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH armTest -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH procesadorTest -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME armTest -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id armTest
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME armTest -section_id armTest
-set_global_assignment -name EDA_TEST_BENCH_FILE procesadorTest.sv -section_id armTest
 set_location_assignment PIN_AE26 -to segments[0]
 set_location_assignment PIN_AE27 -to segments[1]
 set_location_assignment PIN_AE28 -to segments[2]
@@ -72,7 +71,9 @@ set_location_assignment PIN_AH28 -to segments[6]
 set_location_assignment PIN_AF14 -to clk
 set_location_assignment PIN_AB12 -to reset
 set_location_assignment PIN_AC12 -to mostrarLetra
-set_global_assignment -name SYSTEMVERILOG_FILE armForTest.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decoderTest.sv
+set_global_assignment -name SYSTEMVERILOG_FILE controllerTest.sv
+set_global_assignment -name SYSTEMVERILOG_FILE conditionalLogicTest.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decoder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE conditionalLogic.sv
 set_global_assignment -name SYSTEMVERILOG_FILE conditionCheck.sv
@@ -92,13 +93,42 @@ set_global_assignment -name SYSTEMVERILOG_FILE xorGate.sv
 set_global_assignment -name SYSTEMVERILOG_FILE inv.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux4a1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE dataMemory.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ROM32.sv
 set_global_assignment -name SYSTEMVERILOG_FILE arm.sv
 set_global_assignment -name SYSTEMVERILOG_FILE procesadorTest.sv
 set_global_assignment -name SYSTEMVERILOG_FILE deco_datos.sv
+set_global_assignment -name QIP_FILE RAM.qip
+set_global_assignment -name QIP_FILE ROM.qip
+set_global_assignment -name EDA_TEST_BENCH_NAME conditionalLogicTest -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id conditionalLogicTest
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME conditionalLogicTest -section_id conditionalLogicTest
+set_global_assignment -name EDA_TEST_BENCH_NAME controllerTest -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id controllerTest
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME controllerTest -section_id controllerTest
+set_global_assignment -name EDA_TEST_BENCH_NAME decoderTest -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id decoderTest
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME decoderTest -section_id decoderTest
+set_global_assignment -name SYSTEMVERILOG_FILE conditionCheckTest.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME conditionCheckTest -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id conditionCheckTest
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME conditionCheckTest -section_id conditionCheckTest
+set_global_assignment -name SYSTEMVERILOG_FILE datapathTest.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME datapathTest -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapathTest
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapathTest -section_id datapathTest
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE procesadorTest.sv -section_id armTest
+set_global_assignment -name EDA_TEST_BENCH_FILE decoderTest.sv -section_id conditionalLogicTest
+set_global_assignment -name EDA_TEST_BENCH_FILE controller.sv -section_id conditionalLogicTest
+set_global_assignment -name EDA_TEST_BENCH_FILE conditionalLogicTest.sv -section_id conditionalLogicTest
+set_global_assignment -name EDA_TEST_BENCH_FILE decoderTest.sv -section_id controllerTest
+set_global_assignment -name EDA_TEST_BENCH_FILE controllerTest.sv -section_id controllerTest
+set_global_assignment -name EDA_TEST_BENCH_FILE decoderTest.sv -section_id decoderTest
+set_global_assignment -name EDA_TEST_BENCH_FILE conditionCheckTest.sv -section_id conditionCheckTest
+set_global_assignment -name EDA_TEST_BENCH_FILE datapathTest.sv -section_id datapathTest
+set_global_assignment -name EDA_TEST_BENCH_NAME procesadorTest -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id procesadorTest
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME procesadorTest -section_id procesadorTest
+set_global_assignment -name EDA_TEST_BENCH_FILE procesadorTest.sv -section_id procesadorTest
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name QIP_FILE RAM.qip
-set_global_assignment -name QIP_FILE ROM.qip

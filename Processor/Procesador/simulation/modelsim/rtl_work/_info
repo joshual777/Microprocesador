@@ -1,10 +1,486 @@
 m255
 K4
 z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/User/Desktop/VII SEMESTRE 2021/Taller de Diseño Digital/Semana 16/ARMv4Processor-Processor-VGAController/Procesador/simulation/modelsim
+Z0 dC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/simulation/modelsim
+vadder
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1637815685
+!i10b 1
+!s100 TB^hnR53]ckCVRY8;@>QR0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I7@A65PnVEYC:h1^[ObUVj3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1637724973
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adder.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adder.sv
+!i122 6
+L0 1 5
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1637815684.000000
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adder.sv|
+!i113 1
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador
+Z10 tCvgOpt 0
+vadderWithCarry
+R1
+Z11 !s110 1637815686
+!i10b 1
+!s100 ;WF7S0K;kZ16PfY1l:DW=1
+R3
+I0n`X:WRU42b6XfNd_OU_b0
+R4
+S1
+R0
+R5
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adderWithCarry.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adderWithCarry.sv
+!i122 11
+L0 1 7
+R6
+r1
+!s85 0
+31
+Z12 !s108 1637815686.000000
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adderWithCarry.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adderWithCarry.sv|
+!i113 1
+R8
+R9
+R10
+nadder@with@carry
+vALUConFlags
+R1
+R2
+!i10b 1
+!s100 ?zzR8hz9j;U;Rec2SD@Y`0
+R3
+I<AKIcFZRKHdGfRKZSFB_>3
+R4
+S1
+R0
+Z13 w1637810078
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlags.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlags.sv
+!i122 10
+L0 11 23
+R6
+r1
+!s85 0
+31
+Z14 !s108 1637815685.000000
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlags.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlags.sv|
+!i113 1
+R8
+R9
+R10
+n@a@l@u@con@flags
+vconditionCheck
+R1
+!s110 1637815683
+!i10b 1
+!s100 ?P:cX8UPV?zQFbTTi:5dZ3
+R3
+I9AezC`f5i?AWUgB96hMzi2
+R4
+S1
+R0
+R5
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheck.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheck.sv
+!i122 1
+L0 1 30
+R6
+r1
+!s85 0
+31
+Z15 !s108 1637815683.000000
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheck.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheck.sv|
+!i113 1
+R8
+R9
+R10
+ncondition@check
+vcontroller
+R1
+Z16 !s110 1637815684
+!i10b 1
+!s100 mL@DzTiiL9DRhQUf>LEO<3
+R3
+I`?ga;l]UkBCa30^;UQR;e3
+R4
+S1
+R0
+R5
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv
+!i122 2
+L0 8 24
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv|
+!i113 1
+R8
+R9
+R10
+vdataMemory
+R1
+Z17 !s110 1637815687
+!i10b 1
+!s100 zBG>KLAGgn8=5`96<7fin3
+R3
+IL^7OLhN2:`Lbdc0<7=FNo0
+R4
+S1
+R0
+Z18 w1637777245
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv
+!i122 15
+L0 6 23
+R6
+r1
+!s85 0
+31
+Z19 !s108 1637815687.000000
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv|
+!i113 1
+R8
+R9
+R10
+ndata@memory
+vdatapath
+R1
+R16
+!i10b 1
+!s100 5O=Ck_c]Kg:oN4Qdb270I0
+R3
+I0838cLZ@41feHE8fi0R:o1
+R4
+S1
+R0
+R18
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv
+!i122 3
+Z20 L0 1 45
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv|
+!i113 1
+R8
+R9
+R10
+vdeco_datos
+R1
+R17
+!i10b 1
+!s100 EGXRa`@^hS1Z:9PUXCPI_2
+R3
+I66AOQUGk=ZVD__EEgTczg3
+R4
+S1
+R0
+R5
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv
+!i122 16
+R20
+R6
+r1
+!s85 0
+31
+R19
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv|
+!i113 1
+R8
+R9
+R10
+vdecoder
+R1
+!s110 1637815682
+!i10b 1
+!s100 B[cRKlF`:QgMFzlIhbJeG1
+R3
+IV`FAT[jg[G7PXd;73;HE]2
+R4
+S1
+R0
+R18
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoder.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoder.sv
+!i122 0
+L0 1 64
+R6
+r1
+!s85 0
+31
+!s108 1637815682.000000
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoder.sv|
+!i113 1
+R8
+R9
+R10
+vextend
+R1
+R2
+!i10b 1
+!s100 YVQ5=gLLmKOjbcUHNDSg>2
+R3
+IGQJ@aIeGl1V<9SmkBJTQJ1
+R4
+S1
+R0
+R5
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extend.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extend.sv
+!i122 9
+L0 1 15
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extend.sv|
+!i113 1
+R8
+R9
+R10
+vflopr
+R1
+R16
+!i10b 1
+!s100 Yi>CZ<dTRmR7V^DFR8V=81
+R3
+I5hBCdHRIGUUfKek^M;]ZE2
+R4
+S1
+R0
+R5
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopr.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopr.sv
+!i122 4
+L0 1 10
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopr.sv|
+!i113 1
+R8
+R9
+R10
+vinstructionMemory
+R1
+R16
+!i10b 1
+!s100 bQ4iF0Z4hOSE4^L?[XBhB1
+R3
+I1S@BLYdFO7?T;g2LV>N1P0
+R4
+S1
+R0
+Z21 w1637724974
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/instructionMemory.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/instructionMemory.sv
+!i122 5
+L0 6 97
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/instructionMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/instructionMemory.sv|
+!i113 1
+R8
+R9
+R10
+ninstruction@memory
+vinv
+R1
+R11
+!i10b 1
+!s100 jTDifgg=ZO<hM@VTWUUmP2
+R3
+ICPSjf@blY=e@SOM9^g;4S3
+R4
+S1
+R0
+R13
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/inv.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/inv.sv
+!i122 13
+Z22 L0 1 6
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/inv.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/inv.sv|
+!i113 1
+R8
+R9
+R10
+vmux2
+R1
+R2
+!i10b 1
+!s100 chEUMf29dLm;hkSPWAcdA0
+R3
+IS8`nzZgh4__kPih[hNMa<3
+R4
+S1
+R0
+R21
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2.sv
+!i122 7
+L0 1 8
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2.sv|
+!i113 1
+R8
+R9
+R10
+vmux4a1
+R1
+R11
+!i10b 1
+!s100 fgAL=H?L>?kQ@4l;WbGm<0
+R3
+I]enIRPOMmk:fEh83oGGUf2
+R4
+S1
+R0
+R21
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv
+!i122 14
+L0 1 12
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv|
+!i113 1
+R8
+R9
+R10
+vprocesadorTest
+R1
+R17
+!i10b 1
+!s100 __m_z1>@;MZQJLcMK^V=k3
+R3
+IFLn8[f3FAFDURJZMRHf]^0
+R4
+S1
+R0
+w1637815291
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/procesadorTest.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/procesadorTest.sv
+!i122 17
+L0 1 29
+R6
+r1
+!s85 0
+31
+R19
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/procesadorTest.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/procesadorTest.sv|
+!i113 1
+R8
+R9
+R10
+nprocesador@test
+vregfile
+R1
+R2
+!i10b 1
+!s100 l63N2kPhZ<Y[djBl:EZZ<1
+R3
+IXSdA8YNoc0BSA9nI<HXRR1
+R4
+S1
+R0
+R21
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/regfile.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/regfile.sv
+!i122 8
+L0 13 19
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/regfile.sv|
+!i113 1
+R8
+R9
+R10
+vxorGate
+R1
+R11
+!i10b 1
+!s100 L0TI[0_CK@H4AmgkR9POe3
+R3
+ID4SRZU8PHCQN@CB_Q4g7l3
+R4
+S1
+R0
+R13
+8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/xorGate.sv
+FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/xorGate.sv
+!i122 12
+R22
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/xorGate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/xorGate.sv|
+!i113 1
+R8
+R9
+R10
+nxor@gate

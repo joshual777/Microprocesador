@@ -1,0 +1,46 @@
+module datapathTest();
+	
+	logic clk, reset;
+	logic [1:0] RegSrc;
+	logic RegWrite, MemWrite;
+	logic [1:0] ImmSrc;
+	logic ALUSrc;
+	logic [1:0] ALUControl;
+	logic MemtoReg;
+	logic PCSrc;
+	logic[7:0] addressForVga;
+	logic [3:0] ALUFlags;
+	logic [31:0] rdataForVga;
+	logic [31:0] ReadOutData;
+	logic [31:0] PC, Result, Instr;
+
+	
+	
+	// instantiate device to be tested
+	datapath datapathForTest(clk, reset, RegSrc,
+			  RegWrite, MemWrite,
+			  ImmSrc,
+			  ALUSrc,
+			  ALUControl,MemtoReg,
+			  PCSrc, addressForVga,ALUFlags, rdataForVga, ReadOutData,
+			  PC, Result, Instr);
+			  
+	// generate clock to sequence tests
+	always begin
+	clk <= 0; # 5; clk <= 1; #5;
+	end
+	
+	
+	initial begin 
+		#5; reset = 1; #1; reset = 0;
+		
+		
+		
+		#60; 
+		mostrarLetra = 0; #1; mostrarLetra = 1;
+		
+	end
+			  
+	
+	
+endmodule
