@@ -8,57 +8,190 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/simulation/modelsim
-vmux4a1
+Z0 dC:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/simulation/modelsim
+vconditionalLogic
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1637858383
+Z2 !s110 1637887724
 !i10b 1
-!s100 fgAL=H?L>?kQ@4l;WbGm<0
+!s100 3LPi3Z=[cDmdadY:W2li>0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I]enIRPOMmk:fEh83oGGUf2
+IY5C8=iF1>]>zBgSjmYA;>2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1637857366
-8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv
-FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv
+Z5 w1637378733
+8C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionalLogic.sv
+FC:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionalLogic.sv
 !i122 2
-L0 1 12
-Z5 OV;L;2020.1;71
+L0 1 26
+Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1637858383.000000
-!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv|
+Z7 !s108 1637887724.000000
+!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionalLogic.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador|C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionalLogic.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador
-Z9 tCvgOpt 0
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador
+Z10 tCvgOpt 0
+nconditional@logic
+vconditionCheck
+R1
+R2
+!i10b 1
+!s100 ?P:cX8UPV?zQFbTTi:5dZ3
+R3
+IG7PoMEI0ScTWefTKa4Caz1
+R4
+S1
+R0
+R5
+8C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionCheck.sv
+FC:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionCheck.sv
+!i122 3
+L0 1 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionCheck.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador|C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionCheck.sv|
+!i113 1
+R8
+R9
+R10
+ncondition@check
+vcontroller
+R1
+R2
+!i10b 1
+!s100 mL@DzTiiL9DRhQUf>LEO<3
+R3
+IM4f7KJ9XDfUTEf_idJPM=3
+R4
+S1
+R0
+Z11 w1637378073
+8C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controller.sv
+FC:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controller.sv
+!i122 4
+L0 8 24
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador|C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controller.sv|
+!i113 1
+R8
+R9
+R10
+vcontrollerTest
+R1
+R2
+!i10b 1
+!s100 ;ndSQ<f]SU9?ce=Y9UKn10
+R3
+Id=[@:gfTPQg6Sk<Pe@iIe3
+R4
+S1
+R0
+w1637857163
+8C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv
+FC:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv
+!i122 0
+L0 11 82
+R6
+r1
+!s85 0
+31
+!s108 1637887723.000000
+!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador|C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv|
+!i113 1
+R8
+R9
+R10
+ncontroller@test
+vdecoder
+R1
+R2
+!i10b 1
+!s100 B[cRKlF`:QgMFzlIhbJeG1
+R3
+I;e^V:UBnkAko<4Yh;S0N72
+R4
+S1
+R0
+w1637728035
+8C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/decoder.sv
+FC:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/decoder.sv
+!i122 1
+L0 1 64
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/decoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador|C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/decoder.sv|
+!i113 1
+R8
+R9
+R10
+vflopenr
+R1
+R2
+!i10b 1
+!s100 S3S:^ng^A2]T3^7n]9Cch2
+R3
+IK>i8[7egL7CZfmQ0d8Mcn2
+R4
+S1
+R0
+R11
+8C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/flopenr.sv
+FC:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/flopenr.sv
+!i122 5
+L0 1 10
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/flopenr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador|C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/flopenr.sv|
+!i113 1
+R8
+R9
+R10
 vmux4a1Test
 R1
 R2
 !i10b 1
 !s100 X0OTPJPS]@g<RXOg=KEKI0
 R3
-Ikz@YT8_M[93Ja<[fUkhdm0
+IRAMdAb2FAMnzeM_>3lTCC0
 R4
 S1
 R0
-w1637858326
-8C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1Test.sv
-FC:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1Test.sv
-!i122 3
+w1637868723
+8C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/mux4a1Test.sv
+FC:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/mux4a1Test.sv
+!i122 6
 L0 1 47
-R5
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1Test.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador|C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1Test.sv|
-!i113 1
 R7
+!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/mux4a1Test.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador|C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/mux4a1Test.sv|
+!i113 1
 R8
 R9
+R10
 nmux4a1@test

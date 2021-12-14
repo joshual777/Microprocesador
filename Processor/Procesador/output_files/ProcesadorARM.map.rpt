@@ -1,5 +1,5 @@
-Analysis & Synthesis report for ProcesadorARM
-Thu Nov 25 10:39:11 2021
+Analysis & Elaboration report for ProcesadorARM
+Thu Nov 25 18:45:38 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,19 +7,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |mux4a1
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
- 14. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: controller:ctllr|conditionalLogic:cl|flopenr:flagreg1
+  5. Parameter Settings for User Entity Instance: controller:ctllr|conditionalLogic:cl|flopenr:flagreg0
+  6. Analysis & Elaboration Settings
+  7. Port Connectivity Checks: "controller:ctllr"
+  8. Analysis & Elaboration Messages
+  9. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -43,36 +38,67 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 25 10:39:11 2021       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; ProcesadorARM                               ;
-; Top-level Entity Name           ; mux4a1                                      ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 22                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Thu Nov 25 18:45:38 2021       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; ProcesadorARM                               ;
+; Top-level Entity Name         ; controllerTest                              ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controller:ctllr|conditionalLogic:cl|flopenr:flagreg1 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controller:ctllr|conditionalLogic:cl|flopenr:flagreg0 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; mux4a1             ; ProcesadorARM      ;
+; Top-level entity name                                                           ; controllerTest     ; ProcesadorARM      ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -153,273 +179,172 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controller:ctllr"                                                                         ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; RegSrc     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; RegWrite   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ImmSrc     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALUSrc     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALUControl ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; MemWrite   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; MemtoReg   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; PCSrc      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
-; mux4a1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
-
-
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 4          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 4          ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 4          ;
-;     -- 5 input functions                    ; 0          ;
-;     -- 4 input functions                    ; 0          ;
-;     -- <=3 input functions                  ; 0          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 22         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; s[0]~input ;
-; Maximum fan-out                             ; 4          ;
-; Total fan-out                               ; 50         ;
-; Average fan-out                             ; 1.04       ;
-+---------------------------------------------+------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |mux4a1                    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 22   ; 0            ; |mux4a1             ; mux4a1      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |mux4a1|Mux3               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |mux4a1 ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 4                           ;
-;     normal            ; 4                           ;
-;         6 data inputs ; 4                           ;
-; boundary_port         ; 22                          ;
-;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 25 10:38:52 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcesadorARM -c ProcesadorARM
+    Info: Processing started: Thu Nov 25 18:45:29 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcesadorARM -c ProcesadorARM --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file decodertest.sv
-    Info (12023): Found entity 1: decoderTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoderTest.sv Line: 1
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(41): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 41
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(42): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 42
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(43): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 43
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(44): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 44
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(45): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 45
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(46): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 46
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(47): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 47
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(48): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 48
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(49): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 49
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(50): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 50
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(51): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 51
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(52): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 52
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(53): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 53
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(54): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 54
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(55): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 55
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(56): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 56
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(57): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 57
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(58): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 58
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(59): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 59
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(60): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 60
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(61): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 61
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(62): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 62
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(63): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 63
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(64): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 64
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(67): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 67
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(68): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 68
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(69): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 69
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(70): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 70
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(71): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 71
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(72): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 72
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(73): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 73
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(74): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 74
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(75): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 75
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(76): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 76
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(77): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 77
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(78): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 78
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(79): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 79
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(80): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 80
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(81): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 81
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(82): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 82
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(83): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 83
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(84): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 84
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(85): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 85
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(86): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 86
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(87): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 87
-Warning (10229): Verilog HDL Expression warning at controllerTest.sv(88): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 88
+    Info (12023): Found entity 1: decoderTest File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/decoderTest.sv Line: 1
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(41): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 41
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(42): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 42
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(43): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 43
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(44): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 44
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(45): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 45
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(46): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 46
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(47): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 47
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(48): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 48
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(49): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 49
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(50): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 50
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(51): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 51
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(52): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 52
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(53): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 53
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(54): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 54
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(55): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 55
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(56): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 56
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(57): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 57
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(58): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 58
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(59): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 59
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(60): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 60
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(61): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 61
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(62): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 62
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(63): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 63
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(64): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 64
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(67): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 67
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(68): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 68
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(69): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 69
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(70): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 70
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(71): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 71
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(72): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 72
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(73): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 73
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(74): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 74
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(75): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 75
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(76): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 76
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(77): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 77
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(78): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 78
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(79): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 79
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(80): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 80
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(81): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 81
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(82): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 82
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(83): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 83
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(84): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 84
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(85): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 85
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(86): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 86
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(87): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 87
+Warning (10229): Verilog HDL Expression warning at controllerTest.sv(88): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 88
 Info (12021): Found 1 design units, including 1 entities, in source file controllertest.sv
-    Info (12023): Found entity 1: controllerTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controllerTest.sv Line: 11
+    Info (12023): Found entity 1: controllerTest File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file conditionallogictest.sv
-    Info (12023): Found entity 1: conditionalLogicTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionalLogicTest.sv Line: 1
+    Info (12023): Found entity 1: conditionalLogicTest File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionalLogicTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
-    Info (12023): Found entity 1: decoder File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoder.sv Line: 1
+    Info (12023): Found entity 1: decoder File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/decoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file conditionallogic.sv
-    Info (12023): Found entity 1: conditionalLogic File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionalLogic.sv Line: 1
+    Info (12023): Found entity 1: conditionalLogic File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionalLogic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file conditioncheck.sv
-    Info (12023): Found entity 1: conditionCheck File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheck.sv Line: 1
+    Info (12023): Found entity 1: conditionCheck File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionCheck.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
-    Info (12023): Found entity 1: controller File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/controller.sv Line: 8
+    Info (12023): Found entity 1: controller File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controller.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file flopenr.sv
-    Info (12023): Found entity 1: flopenr File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopenr.sv Line: 1
+    Info (12023): Found entity 1: flopenr File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/flopenr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
-    Info (12023): Found entity 1: datapath File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapath.sv Line: 1
+    Info (12023): Found entity 1: datapath File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/datapath.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopr.sv
-    Info (12023): Found entity 1: flopr File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/flopr.sv Line: 1
+    Info (12023): Found entity 1: flopr File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/flopr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instructionmemory.sv
-    Info (12023): Found entity 1: instructionMemory File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/instructionMemory.sv Line: 6
+    Info (12023): Found entity 1: instructionMemory File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/instructionMemory.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: adder File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adder.sv Line: 1
+    Info (12023): Found entity 1: adder File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
-    Info (12023): Found entity 1: mux2 File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2.sv Line: 1
+    Info (12023): Found entity 1: mux2 File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/mux2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regfile File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/regfile.sv Line: 13
+    Info (12023): Found entity 1: regfile File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/regfile.sv Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file extend.sv
-    Info (12023): Found entity 1: extend File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extend.sv Line: 1
+    Info (12023): Found entity 1: extend File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/extend.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file aluconflags.sv
-    Info (12023): Found entity 1: ALUConFlags File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlags.sv Line: 11
+    Info (12023): Found entity 1: ALUConFlags File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/ALUConFlags.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file alusinflags.sv
-    Info (12023): Found entity 1: ALUSinFlags File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUSinFlags.sv Line: 10
+    Info (12023): Found entity 1: ALUSinFlags File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/ALUSinFlags.sv Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file adderwithcarry.sv
-    Info (12023): Found entity 1: adderWithCarry File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/adderWithCarry.sv Line: 1
+    Info (12023): Found entity 1: adderWithCarry File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/adderWithCarry.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file xorgate.sv
-    Info (12023): Found entity 1: xorGate File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/xorGate.sv Line: 1
+    Info (12023): Found entity 1: xorGate File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/xorGate.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file inv.sv
-    Info (12023): Found entity 1: inv File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/inv.sv Line: 1
+    Info (12023): Found entity 1: inv File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/inv.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4a1.sv
-    Info (12023): Found entity 1: mux4a1 File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1.sv Line: 1
+    Info (12023): Found entity 1: mux4a1 File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/mux4a1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datamemory.sv
-    Info (12023): Found entity 1: dataMemory File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/dataMemory.sv Line: 6
+    Info (12023): Found entity 1: dataMemory File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/dataMemory.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file arm.sv
-    Info (12023): Found entity 1: arm File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/arm.sv Line: 1
+    Info (12023): Found entity 1: arm File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/arm.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file procesadortest.sv
-    Info (12023): Found entity 1: procesadorTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/procesadorTest.sv Line: 1
+    Info (12023): Found entity 1: procesadorTest File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/procesadorTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file deco_datos.sv
-    Info (12023): Found entity 1: deco_datos File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/deco_datos.sv Line: 1
+    Info (12023): Found entity 1: deco_datos File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/deco_datos.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
-    Info (12023): Found entity 1: RAM File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/RAM.v Line: 40
+    Info (12023): Found entity 1: RAM File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/RAM.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
-    Info (12023): Found entity 1: ROM File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ROM.v Line: 40
+    Info (12023): Found entity 1: ROM File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/ROM.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file conditionchecktest.sv
-    Info (12023): Found entity 1: conditionCheckTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionCheckTest.sv Line: 1
+    Info (12023): Found entity 1: conditionCheckTest File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionCheckTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapathtest.sv
-    Info (12023): Found entity 1: datapathTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/datapathTest.sv Line: 1
+    Info (12023): Found entity 1: datapathTest File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/datapathTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2test.sv
-    Info (12023): Found entity 1: mux2Test File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux2Test.sv Line: 1
-Warning (10229): Verilog HDL Expression warning at extendTest.sv(18): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 18
-Warning (10229): Verilog HDL Expression warning at extendTest.sv(21): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 21
-Warning (10229): Verilog HDL Expression warning at extendTest.sv(24): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 24
-Warning (10229): Verilog HDL Expression warning at extendTest.sv(27): truncated literal to match 20 bits File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 27
+    Info (12023): Found entity 1: mux2Test File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/mux2Test.sv Line: 1
+Warning (10229): Verilog HDL Expression warning at extendTest.sv(18): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/extendTest.sv Line: 18
+Warning (10229): Verilog HDL Expression warning at extendTest.sv(21): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/extendTest.sv Line: 21
+Warning (10229): Verilog HDL Expression warning at extendTest.sv(24): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/extendTest.sv Line: 24
+Warning (10229): Verilog HDL Expression warning at extendTest.sv(27): truncated literal to match 20 bits File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/extendTest.sv Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file extendtest.sv
-    Info (12023): Found entity 1: extendTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/extendTest.sv Line: 1
+    Info (12023): Found entity 1: extendTest File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/extendTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file aluconflagstest.sv
-    Info (12023): Found entity 1: ALUConFlagsTest File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/ALUConFlagsTest.sv Line: 1
+    Info (12023): Found entity 1: ALUConFlagsTest File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/ALUConFlagsTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4a1test.sv
-    Info (12023): Found entity 1: mux4a1Test File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/mux4a1Test.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at decoderTest.sv(15): created implicit net for "Flagw" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/decoderTest.sv Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at conditionalLogicTest.sv(13): created implicit net for "Flagw" File: C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/conditionalLogicTest.sv Line: 13
-Info (12127): Elaborating entity "mux4a1" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/output_files/ProcesadorARM.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
-    Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Thu Nov 25 10:39:11 2021
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:49
+    Info (12023): Found entity 1: mux4a1Test File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/mux4a1Test.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at decoderTest.sv(15): created implicit net for "Flagw" File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/decoderTest.sv Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at conditionalLogicTest.sv(13): created implicit net for "Flagw" File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionalLogicTest.sv Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(35): created implicit net for "rdataForVga" File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/arm.sv Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(35): created implicit net for "addressForfpga" File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/arm.sv Line: 35
+Info (12127): Elaborating entity "controllerTest" for the top level hierarchy
+Warning (10755): Verilog HDL warning at controllerTest.sv(32): assignments to clk create a combinational loop File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 32
+Info (12128): Elaborating entity "controller" for hierarchy "controller:ctllr" File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 26
+Info (12128): Elaborating entity "decoder" for hierarchy "controller:ctllr|decoder:dec" File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controller.sv Line: 25
+Info (12128): Elaborating entity "conditionalLogic" for hierarchy "controller:ctllr|conditionalLogic:cl" File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controller.sv Line: 29
+Info (12128): Elaborating entity "flopenr" for hierarchy "controller:ctllr|conditionalLogic:cl|flopenr:flagreg1" File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionalLogic.sv Line: 15
+Info (12128): Elaborating entity "conditionCheck" for hierarchy "controller:ctllr|conditionalLogic:cl|conditionCheck:condCheck" File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/conditionalLogic.sv Line: 19
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/controllerTest.sv Line: 13
+Info (144001): Generated suppressed messages file C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/output_files/ProcesadorARM.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 4759 megabytes
+    Info: Processing ended: Thu Nov 25 18:45:38 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:23
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/abiga/OneDrive/Escritorio/Microprocesador/Processor/Procesador/output_files/ProcesadorARM.map.smsg.
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/berta/OneDrive/Documentos/GitHub/Microprocesador/Processor/Procesador/output_files/ProcesadorARM.map.smsg.
 
 

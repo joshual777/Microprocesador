@@ -1,11 +1,5 @@
 module arm(input logic clk, reset, mostrarLetra,
-			  
-			  /*output logic [31:0] ReadOutData, //UNICA salida "real" del procesador
-			  
-			  output logic [31:0] PC, Result, Instr, // Salidas que se quieren ver del datapath
-			  output logic [3:0] ALUFlags,			  // Salidas que se quieren ver de la unidad de control
-			  output logic PCSrc, MemtoReg, MemWrite, ALUSrc, RegWrite, //Salidas que se quieren ver de la unidad de control
-			  output logic [1:0]  ALUControl, ImmSrc, RegSrc, */				//Salidas que se quieren ver de la unidad de control
+			  			//Salidas que se quieren ver de la unidad de control
 			  output logic [6:0] segments
 			  );
 			  
@@ -13,7 +7,7 @@ module arm(input logic clk, reset, mostrarLetra,
 	//logic 		PCSrc, MemtoReg, MemWrite, ALUSrc, RegWrite;
 	//logic [1:0] ALUControl, ImmSrc, RegSrc;
 	
-	logic [31:0] ReadOutData, rdataForVga; //UNICA salida "real" del procesador
+	logic [31:0] ReadOutData, rdataForfpga; //fpga/UNICA salida "real" del procesador
 	logic [31:0] PC, Result, Instr; // Salidas que se quieren ver del datapath
 	logic [3:0] ALUFlags;			  // Salidas que se quieren ver de la unidad de control
 	logic PCSrc, MemtoReg, MemWrite, ALUSrc, RegWrite; //Salidas que se quieren ver de la unidad de control
@@ -35,11 +29,9 @@ module arm(input logic clk, reset, mostrarLetra,
 					PCSrc,
 					addressForVga,					
 					ALUFlags, 
-					rdataForVga,
+					rdataForfpga,
 					ReadOutData, 
-					PC, Result, Instr); // Salidas que solo se quieren ver del datapath
-					
-	
-	deco_datos mostrarDatos(clk, mostrarLetra, rdataForVga, addressForVga, segments);
+					PC, Result, Instr); // Salidas que solo se 
+	deco_datos mostrarDatos(clk, mostrarLetra, rdataForVga, addressForfpga, segments);
 	
 endmodule
